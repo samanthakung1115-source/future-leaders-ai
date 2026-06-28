@@ -188,3 +188,109 @@ Discovery AI
 Confidence：
 
 94%
+
+# VRT (Vertiv)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- AI Infrastructure
+- Power Infrastructure
+- Data Center
+- Compound Winner
+
+---
+
+## Business
+
+A global leader in critical digital infrastructure for AI data centers.
+
+Main Products
+
+- Power Systems
+- Cooling Systems
+- Data Center Infrastructure
+- Rack Solutions
+- Monitoring Software
+- Infrastructure Services
+
+---
+
+## Why It Won
+
+- AI data centers required significantly more power and cooling
+- Hyperscalers accelerated infrastructure investment
+- Revenue growth accelerated with AI demand
+- EPS continued to surprise to the upside
+- Operating margins expanded through scale and execution
+
+---
+
+## Winner DNA
+
+- AI Infrastructure
+- Power Infrastructure
+- Cooling Infrastructure
+- Revenue Acceleration
+- EPS Revision
+- Margin Expansion
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★★
+- AI Exposure ★★★★★
+- Infrastructure Demand ★★★★★
+- Operating Margin ★★★★★
+- Market Leadership ★★★★☆
+
+---
+
+## Investment Thesis
+
+AI is not only about GPUs.
+
+Every AI data center requires reliable power, cooling and critical infrastructure.
+
+Vertiv became one of the largest beneficiaries of global AI infrastructure investment.
+
+---
+
+## Risks
+
+- AI capital expenditure slowdown
+- Large customer concentration
+- Infrastructure project delays
+
+---
+
+## Lessons Learned
+
+The greatest AI winners are often the companies that provide the essential infrastructure behind AI.
+
+Do not focus only on semiconductor companies.
+
+Power and cooling are equally critical to AI deployment.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+Power
+
+Cooling
+
+Data Center
+
+Winner DNA
+
+Confidence: 9.8 / 10
