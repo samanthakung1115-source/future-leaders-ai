@@ -196,3 +196,107 @@ Discovery AI
 Confidence：
 
 96%
+# SNDK (SanDisk)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- Storage
+- AI Infrastructure
+- Flash Memory
+- Compound Winner
+
+---
+
+## Business
+
+A leading provider of flash storage solutions for consumer, enterprise and AI data centers.
+
+Main Products
+
+- NAND Flash
+- SSD
+- Enterprise SSD
+- AI Storage
+- Embedded Flash
+
+---
+
+## Why It Won
+
+- AI workloads increased demand for high-performance flash storage
+- Enterprise SSD adoption accelerated
+- NAND pricing recovered
+- Revenue and EPS improved with industry recovery
+- Structural AI demand supported long-term growth
+
+---
+
+## Winner DNA
+
+- AI Infrastructure
+- Flash Storage
+- Enterprise SSD
+- Revenue Acceleration
+- EPS Revision
+- Storage Growth
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★☆
+- EPS Growth ★★★★★
+- AI Exposure ★★★★☆
+- Enterprise SSD ★★★★★
+- NAND Recovery ★★★★★
+- Margin Expansion ★★★★☆
+
+---
+
+## Investment Thesis
+
+AI generates massive amounts of data that must be stored and accessed efficiently.
+
+High-performance flash storage becomes an essential layer of AI infrastructure.
+
+SanDisk benefits from both AI-driven storage demand and NAND industry recovery.
+
+---
+
+## Risks
+
+- NAND oversupply
+- Flash pricing volatility
+- Enterprise spending slowdown
+
+---
+
+## Lessons Learned
+
+AI infrastructure is not limited to GPUs and networking.
+
+Storage is a long-term structural beneficiary of AI adoption.
+
+One mistake investors often make is assuming storage companies are purely cyclical.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+Storage
+
+Flash
+
+Enterprise SSD
+
+Winner DNA
+
+Confidence: 9.4 / 10
