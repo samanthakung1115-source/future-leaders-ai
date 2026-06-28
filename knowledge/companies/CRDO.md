@@ -184,3 +184,118 @@ Discovery AI
 Confidence：
 
 94%
+# CRDO (Credo Technology)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- AI Infrastructure
+- High Speed Networking
+- Data Center
+- Compound Winner
+
+---
+
+## Business
+
+High-speed connectivity solutions for AI Data Centers.
+
+Main Products
+
+- Active Electrical Cable (AEC)
+- SerDes
+- Optical Connectivity
+- PCIe
+- Ethernet
+
+---
+
+## Why It Won
+
+- AI Data Center demand explosion
+- Hyperscaler adoption
+- AI networking bottleneck
+- Strong revenue acceleration
+- EPS revisions higher
+- Margin expansion
+
+---
+
+## Winner DNA
+
+- AI Infrastructure
+- Networking
+- High Gross Margin
+- Revenue Acceleration
+- EPS Upgrade
+- Institutional Accumulation
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★★
+- AI Exposure ★★★★★
+- Gross Margin ★★★★★
+- Market Leadership ★★★★☆
+- TAM Expansion ★★★★★
+
+---
+
+## Investment Thesis
+
+CRDO is not a traditional semiconductor company.
+
+It is a critical infrastructure provider for AI networking.
+
+As AI clusters become larger,
+network bandwidth demand grows exponentially,
+making high-speed connectivity essential.
+
+---
+
+## Risks
+
+- AI Capex slowdown
+- Customer concentration
+- Valuation expansion
+
+---
+
+## Lessons Learned
+
+The market underestimated
+AI networking demand.
+
+Networking became one of the largest beneficiaries of AI infrastructure.
+
+Do not only focus on GPU companies.
+
+AI infrastructure includes networking,
+power,
+cooling,
+storage,
+memory,
+and connectivity.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+Networking
+
+Hyperscaler
+
+Future Leader
+
+Winner DNA
+
+Confidence: 9.8 / 10
