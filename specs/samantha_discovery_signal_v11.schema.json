@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "samantha.discovery_signal.v11",
+  "title": "Samantha Discovery Signal v11",
+  "description": "Future Leaders AI output contract for stock-terminal-pro compatibility.",
+  "type": "object",
+  "required": ["schema", "producer", "consumer", "company", "consensus_score", "decision", "evidence_count", "scores", "rationale"],
+  "properties": {
+    "schema": {"const": "samantha.discovery_signal.v11"},
+    "producer": {"const": "future-leaders-ai"},
+    "consumer": {"const": "stock-terminal-pro"},
+    "company": {"type": "string"},
+    "consensus_score": {"type": "number", "minimum": 0, "maximum": 10},
+    "decision": {"type": "string"},
+    "evidence_count": {"type": "integer", "minimum": 0},
+    "scores": {
+      "type": "object",
+      "required": ["growth", "moat", "valuation", "quality", "risk"],
+      "properties": {
+        "growth": {"type": "number"},
+        "moat": {"type": "number"},
+        "valuation": {"type": "number"},
+        "quality": {"type": "number"},
+        "risk": {"type": "number"}
+      }
+    },
+    "rationale": {"type": "array", "items": {"type": "string"}}
+  }
+}

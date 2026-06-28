@@ -1,0 +1,9 @@
+[project]
+name = "future-leaders-ai"
+version = "11.0.0"
+description = "Future Leaders AI v11 Knowledge Engine, Discovery Engine, and AI Consensus"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

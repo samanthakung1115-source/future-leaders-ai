@@ -1,17 +1,22 @@
+#!/usr/bin/env python3
 from __future__ import annotations
+
 import argparse
-from knowledge_engine import KnowledgeEngine
+
+from future_leaders_ai import KnowledgeEngine
+
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build Samantha Future Leaders AI v11 Knowledge Index")
-    parser.add_argument("--repo", default=".", help="Repository root")
-    parser.add_argument("--out", default=".samantha/knowledge_index.json", help="Output path inside repo")
+    parser = argparse.ArgumentParser(description="Build Future Leaders AI v11 knowledge index.")
+    parser.add_argument("--repo", default=".", help="Path to future-leaders-ai repository root.")
+    parser.add_argument("--out", default=None, help="Optional output path. Default: .samantha/knowledge_index.json")
     args = parser.parse_args()
+
     engine = KnowledgeEngine(args.repo)
-    index = engine.build()
-    out = engine.save(args.out)
-    print(f"Knowledge index built: {index.metadata['file_count']} files, {index.metadata['chunk_count']} chunks")
-    print(f"Saved to: {out}")
+    objects = engine.build_index()
+    output = engine.save_index(args.out)
+    print(f"Future Leaders AI v11 index built: {len(objects)} objects -> {output}")
+
 
 if __name__ == "__main__":
     main()
