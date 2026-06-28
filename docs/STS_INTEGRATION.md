@@ -33,3 +33,11 @@ Candidate。
 不能修改：
 
 Portfolio。
+
+stock-terminal-pro
+= 管我的持股
+
+future-leaders-ai
+= 找市場黑馬
+
+兩者共同組成 Samantha AI Platform
