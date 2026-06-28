@@ -186,3 +186,108 @@ Discovery AI
 Confidence：
 
 95%
+
+# DDOG (Datadog)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- AI Software
+- Cloud Platform
+- Observability
+- Compound Winner
+
+---
+
+## Business
+
+A leading cloud-native observability and monitoring platform for modern applications and AI infrastructure.
+
+Main Products
+
+- Infrastructure Monitoring
+- Application Performance Monitoring (APM)
+- Log Management
+- Cloud Security
+- AI Observability
+
+---
+
+## Why It Won
+
+- Cloud adoption accelerated globally
+- AI workloads increased monitoring complexity
+- Customers expanded platform usage
+- High recurring revenue
+- Strong free cash flow generation
+- Continuous product expansion
+
+---
+
+## Winner DNA
+
+- AI Software
+- Cloud Platform
+- Subscription Business
+- High Gross Margin
+- Recurring Revenue
+- Product Expansion
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★☆
+- AI Exposure ★★★★☆
+- Recurring Revenue ★★★★★
+- Gross Margin ★★★★★
+- Free Cash Flow ★★★★★
+
+---
+
+## Investment Thesis
+
+As AI applications become more complex, enterprises require comprehensive monitoring, observability and security.
+
+Datadog benefits from long-term cloud adoption and expanding AI workloads through its software platform.
+
+---
+
+## Risks
+
+- Enterprise IT spending slowdown
+- Cloud optimization
+- Valuation compression
+- Competition
+
+---
+
+## Lessons Learned
+
+AI is not only infrastructure.
+
+Software platforms that help enterprises operate AI systems can also become long-term compound winners.
+
+Recurring revenue and product expansion create durable competitive advantages.
+
+---
+
+## Samantha AI Tags
+
+AI Software
+
+Cloud
+
+Observability
+
+Recurring Revenue
+
+Winner DNA
+
+Confidence: 9.6 / 10
