@@ -132,3 +132,115 @@ Wait / Add on Pullback
 則：
 
 Downgrade
+# NVDA (NVIDIA)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- AI Infrastructure
+- AI Platform
+- Ecosystem
+- Hyper Growth
+
+---
+
+## Business
+
+The global leader in AI computing infrastructure.
+
+Main Products
+
+- GPU
+- CUDA
+- DGX
+- Networking
+- AI Enterprise
+- Grace CPU
+
+---
+
+## Why It Won
+
+- CUDA ecosystem created a strong competitive moat
+- AI demand accelerated globally
+- Data Center became the primary growth engine
+- Revenue and EPS experienced explosive growth
+- Continuous product innovation maintained leadership
+- Massive hyperscaler capital expenditure
+
+---
+
+## Winner DNA
+
+- AI Infrastructure
+- Platform Monopoly
+- Ecosystem Lock-in
+- Revenue Explosion
+- EPS Explosion
+- Pricing Power
+- High Gross Margin
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★★
+- AI Exposure ★★★★★
+- Gross Margin ★★★★★
+- Market Leadership ★★★★★
+- Pricing Power ★★★★★
+
+---
+
+## Investment Thesis
+
+NVIDIA is not simply a GPU company.
+
+It owns the dominant AI computing platform through CUDA,
+hardware, networking and software integration.
+
+As AI adoption expands,
+its ecosystem becomes increasingly difficult to replace.
+
+---
+
+## Risks
+
+- AI spending slowdown
+- Export restrictions
+- Competition from custom AI chips
+- Extremely high valuation
+
+---
+
+## Lessons Learned
+
+Winning companies are often platform builders,
+not just hardware manufacturers.
+
+The strongest competitive advantage came from software ecosystem,
+not GPU performance alone.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+CUDA
+
+Platform
+
+Data Center
+
+Hyperscaler
+
+Winner DNA
+
+Confidence: 10 / 10
