@@ -1,4 +1,4 @@
-# WDC (Western Digital)
+# Western Digital (WDC)
 
 ## Status
 
@@ -6,98 +6,129 @@ Winner
 
 ---
 
-## DNA Type
+## Summary
 
-- Storage
-- Recovery
-- AI Infrastructure
-- Data Center
+Western Digital is a global leader in enterprise storage infrastructure.
 
----
+The AI era dramatically increases storage demand, making storage one of the essential layers of AI infrastructure.
 
-## Business
-
-A global leader in data storage technologies serving cloud, enterprise and consumer markets.
-
-Main Products
-
-- HDD
-- SSD
-- Enterprise Storage
-- Data Center Storage
-- Flash Storage
+Unlike traditional storage cycles, AI creates long-term structural demand.
 
 ---
 
-## Why It Won
+## Why Samantha Selected
 
-- AI significantly increased demand for enterprise storage
-- Data center expansion accelerated storage deployment
-- Storage pricing recovered after industry downturn
-- Revenue and EPS improved as supply-demand balance normalized
-- Market re-rated storage companies with AI exposure
+- Enterprise storage recovery
+- AI data growth
+- SSD demand expansion
+- Revenue acceleration
+- EPS revisions higher
+- Storage cycle recovery
 
 ---
 
 ## Winner DNA
 
-- Storage Recovery
+- Storage Infrastructure
 - AI Infrastructure
+- Recovery
 - Enterprise Storage
-- Revenue Recovery
-- EPS Revision
-- Operating Leverage
 
 ---
 
 ## Key Signals
 
-- Revenue Growth ★★★★☆
-- EPS Growth ★★★★★
-- AI Exposure ★★★★☆
-- Storage Recovery ★★★★★
-- Enterprise Demand ★★★★★
-- Margin Expansion ★★★★☆
+Revenue Growth        ★★★★★
 
----
+EPS Growth            ★★★★★
 
-## Investment Thesis
+Storage Demand        ★★★★★
 
-AI infrastructure requires not only compute and networking but also massive data storage.
+Capital Efficiency    ★★★★☆
 
-As hyperscalers expand AI data centers, demand for enterprise storage and flash solutions continues to grow.
+AI Exposure           ★★★★☆
 
-Western Digital benefits from both the storage cycle recovery and long-term AI infrastructure investment.
+Industry Recovery     ★★★★★
 
 ---
 
 ## Risks
 
+- NAND oversupply
+- Enterprise spending slowdown
 - Storage pricing weakness
-- Demand slowdown
-- Inventory correction
-- Competitive pressure
 
 ---
 
-## Lessons Learned
+## AI Consensus
 
-Storage is one of the essential layers of AI infrastructure.
+Growth                9.2 / 10
 
-Recovery opportunities become exceptional when cyclical recovery is supported by long-term structural demand.
+Quality               8.9 / 10
+
+Moat                  8.7 / 10
+
+Capital Efficiency    8.8 / 10
+
+Risk                  6.8 / 10
+
+Overall               9.0 / 10
 
 ---
 
-## Samantha AI Tags
+## Samantha Lessons
 
-AI Infrastructure
+Every AI model generates enormous amounts of data.
+
+Without storage, AI infrastructure cannot operate.
+
+Storage companies become structural beneficiaries when AI demand replaces purely cyclical demand.
+
+---
+
+## Discovery Tags
 
 Storage
 
+AI Infrastructure
+
 Recovery
 
-Enterprise Storage
+Enterprise SSD
 
-Winner DNA
+Winner Genome
 
-Confidence: 9.5 / 10
+---
+
+## Similar DNA
+
+MU
+
+VRT
+
+CRDO
+
+---
+
+## Why NOT Buy
+
+- Storage prices decline rapidly.
+- Enterprise SSD demand weakens.
+- AI infrastructure spending slows.
+- EPS revisions turn negative.
+
+---
+
+## Samantha Verdict
+
+Western Digital represents a classic Recovery + AI Infrastructure opportunity, where cyclical recovery is reinforced by long-term structural AI demand.
+
+Priority：★★★★☆
+
+---
+
+## Knowledge Confidence
+
+Verified Winner
+
+Confidence：9.3 / 10
