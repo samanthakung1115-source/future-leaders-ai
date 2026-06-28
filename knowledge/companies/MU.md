@@ -187,3 +187,104 @@ Discovery AI
 Confidence：
 
 95%
+# MU (Micron Technology)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- Recovery
+- AI Memory
+- Semiconductor
+- Cycle Leader
+
+---
+
+## Business
+
+A global leader in memory and storage solutions.
+
+Main Products
+
+- DRAM
+- HBM
+- NAND Flash
+- SSD
+- Enterprise Memory
+
+---
+
+## Why It Won
+
+- AI servers dramatically increased HBM demand
+- Memory cycle reached its bottom and recovered
+- Supply discipline improved industry profitability
+- Revenue and EPS accelerated sharply
+- AI became a structural growth driver beyond the traditional memory cycle
+
+---
+
+## Winner DNA
+
+- Recovery Cycle
+- AI Memory
+- Revenue Acceleration
+- EPS Revision
+- Operating Leverage
+- Supply Discipline
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★★
+- AI Exposure ★★★★★
+- Memory Cycle ★★★★★
+- Margin Expansion ★★★★★
+- Industry Leadership ★★★★★
+
+---
+
+## Investment Thesis
+
+Micron transformed from a cyclical memory company into a key AI infrastructure supplier.
+
+HBM became the critical component for AI accelerators, creating a structural demand shift beyond previous memory cycles.
+
+---
+
+## Risks
+
+- Memory oversupply
+- ASP decline
+- AI spending slowdown
+- Geopolitical risks
+
+---
+
+## Lessons Learned
+
+The best recovery investments occur when a cyclical industry gains a long-term structural growth driver.
+
+HBM changed the memory industry from a pure commodity business into a strategic AI infrastructure component.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+HBM
+
+Memory
+
+Recovery
+
+Winner DNA
+
+Confidence: 9.7 / 10
