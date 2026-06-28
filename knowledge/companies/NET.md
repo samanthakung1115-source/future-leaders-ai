@@ -1,180 +1,136 @@
-# NET｜Cloudflare
+# Cloudflare (NET)
 
-Last Update:
-2026-06-28
+## Status
 
----
-
-## Company Role
-
-Cloudflare 是全球 Edge Cloud 與 AI Security 領導者。
-
-隨著 AI Agent、AI Application 及全球 Edge Computing 快速發展，
-Cloudflare 已從 CDN 公司轉型為 AI 網路平台。
+Winner
 
 ---
 
-## Sector
+## Summary
 
-Cloud
+Cloudflare is building one of the world's largest edge cloud platforms.
 
-Cyber Security
-
-Edge Computing
-
-AI Platform
-
-Networking
+Its competitive advantage comes from combining security, networking, edge computing and AI services on a single global network.
 
 ---
 
-## Current AI Status
+## Why Samantha Selected
 
-Future Leader
+- Edge AI platform
+- Global cloud network
+- Cybersecurity leadership
+- AI inference at the edge
+- High recurring revenue
+- Expanding enterprise adoption
 
 ---
 
 ## Winner DNA
 
-★★★★★
-
-理由：
-
-- 全球 Edge Network
-- AI Agent Platform
-- Zero Trust Security
-- Developer Platform
-- 全球節點優勢
-- 高續約率
+- Cloud Platform
+- Edge Computing
+- AI Infrastructure
+- Cybersecurity
+- Compound Growth
 
 ---
 
-## Catalysts
+## Key Signals
 
-- AI Agent
-- Workers AI
-- Zero Trust
-- Edge Computing
-- Enterprise AI
-- Developer Platform
+Revenue Growth        ★★★★★
+
+Recurring Revenue     ★★★★★
+
+Gross Margin          ★★★★★
+
+Enterprise Growth     ★★★★★
+
+AI Exposure           ★★★★☆
+
+Capital Efficiency    ★★★★☆
 
 ---
 
 ## Risks
 
-- 高估值
-- Enterprise Spending 放緩
-- Cloud Budget 縮減
-- AI 商業化速度低於預期
+- Enterprise IT slowdown
+- Cloud competition
+- Valuation premium
+- Slower customer expansion
 
 ---
 
-## Event Notes
+## AI Consensus
 
-### Workers AI
+Growth                9.4 / 10
 
-若：
+Quality               9.3 / 10
 
-企業開始大量部署 AI Agent。
+Moat                  9.4 / 10
 
-AI：
+Capital Efficiency    8.9 / 10
 
-Upgrade
+Risk                  6.4 / 10
 
-原因：
-
-Cloudflare Workers AI 將直接受惠。
+Overall               9.3 / 10
 
 ---
 
-### Zero Trust Adoption
+## Samantha Lessons
 
-若：
+AI applications require a secure and globally distributed cloud network.
 
-企業增加 Cyber Security 支出。
+Edge computing becomes increasingly important as AI moves closer to users.
 
-AI：
-
-Leader +
+Cloud platforms with strong network effects can become long-term compound winners.
 
 ---
 
-## AI Rule
+## Discovery Tags
 
-NET
-
-不是：
-
-CDN 公司。
-
-AI 必須理解：
-
-Cloudflare
-
-已轉型：
-
-AI Platform
-
-+
-
-Cyber Security
-
-+
+Cloud
 
 Edge AI
 
----
+Cybersecurity
 
-## Holding View
+AI Infrastructure
 
-6–12 Months
-
-若 AI Agent 普及，
-
-Cloudflare 將成為重要受惠者。
+Winner Genome
 
 ---
 
-## AI Decision
+## Similar DNA
 
-若：
+DDOG
 
-Workers AI 成長
+ANET
 
-Enterprise 客戶增加
-
-Zero Trust 擴大
-
-Developer 生態持續增加
-
-則：
-
-Leader Candidate
-
-Upgrade
-
-若：
-
-企業 IT Budget 減少
-
-Cloud 成長放緩
-
-AI：
-
-Watch
+NVDA
 
 ---
 
-## Samantha Notes
+## Why NOT Buy
 
-NET 是 Samantha AI Platform 定義的：
+- Enterprise growth slows materially.
+- AI products fail to monetize.
+- Revenue growth falls below long-term trend.
+- Large customers reduce cloud spending.
 
-AI Edge Infrastructure Leader。
+---
 
-Discovery AI
+## Samantha Verdict
 
-★★★★★
+Cloudflare represents the cloud infrastructure layer of AI.
 
-Confidence：
+Its combination of networking, security and edge computing makes it a long-term Future Leader candidate.
 
-94%
+Priority：★★★★★
+
+---
+
+## Knowledge Confidence
+
+Verified Winner
+
+Confidence：9.5 / 10
