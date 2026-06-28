@@ -167,3 +167,105 @@ Discovery AI
 Confidence：
 
 94%
+# ANET (Arista Networks)
+
+## Status
+
+Winner
+
+---
+
+## DNA Type
+
+- AI Infrastructure
+- Networking
+- Cloud Infrastructure
+- Compound Winner
+
+---
+
+## Business
+
+A leading provider of high-performance cloud networking solutions for AI data centers.
+
+Main Products
+
+- Ethernet Switches
+- AI Networking
+- Cloud Networking
+- EOS Network Operating System
+- Data Center Switching
+
+---
+
+## Why It Won
+
+- AI clusters required ultra-high-speed networking
+- Hyperscalers expanded AI infrastructure aggressively
+- Cloud networking demand accelerated
+- Software differentiation through EOS
+- Strong revenue and EPS growth
+
+---
+
+## Winner DNA
+
+- AI Infrastructure
+- Cloud Networking
+- Hyperscaler
+- High Gross Margin
+- Revenue Acceleration
+- Software + Hardware Integration
+
+---
+
+## Key Signals
+
+- Revenue Growth ★★★★★
+- EPS Growth ★★★★★
+- AI Exposure ★★★★★
+- Cloud Infrastructure ★★★★★
+- Market Leadership ★★★★★
+- Gross Margin ★★★★★
+
+---
+
+## Investment Thesis
+
+AI data centers require more than GPUs.
+
+As AI clusters grow larger, low-latency networking becomes mission critical.
+
+Arista benefits from both AI infrastructure spending and cloud networking expansion through its hardware and software platform.
+
+---
+
+## Risks
+
+- Enterprise spending slowdown
+- Cloud Capex reduction
+- Competition from Cisco and other networking vendors
+
+---
+
+## Lessons Learned
+
+AI computing performance depends not only on chips but also on network architecture.
+
+Networking becomes increasingly valuable as AI clusters scale.
+
+---
+
+## Samantha AI Tags
+
+AI Infrastructure
+
+Networking
+
+Cloud
+
+Hyperscaler
+
+Winner DNA
+
+Confidence: 9.8 / 10
