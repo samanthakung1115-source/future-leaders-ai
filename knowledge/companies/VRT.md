@@ -1,195 +1,4 @@
-# VRT｜Vertiv Holdings
-
-Last Update:
-2026-06-28
-
----
-
-## Company Role
-
-Vertiv 是全球 AI Data Center 基礎建設的重要供應商。
-
-主要提供：
-
-AI 機房
-
-液冷
-
-散熱
-
-UPS
-
-電力管理
-
-資料中心基礎設備。
-
----
-
-## Sector
-
-AI Infrastructure
-
-Power
-
-Cooling
-
-Data Center
-
-Industrial Technology
-
----
-
-## Current AI Status
-
-Future Leader
-
----
-
-## Winner DNA
-
-★★★★★
-
-原因：
-
-- AI Data Center 快速擴建
-- 液冷需求大幅增加
-- GPU 功耗快速提高
-- Hyperscaler 持續建廠
-- AI Infrastructure 長期受惠
-
----
-
-## Catalysts
-
-- Liquid Cooling
-- AI Factory
-- AI Server
-- Hyperscaler Expansion
-- GPU Power Demand
-- Edge Data Center
-
----
-
-## Risks
-
-- AI Data Center 建設放緩
-- 電力設備交期延後
-- 高估值修正
-- CapEx 放緩
-
----
-
-## Event Notes
-
-### AI Factory Expansion
-
-若：
-
-大型雲端公司持續擴建 AI 機房。
-
-AI：
-
-Upgrade
-
----
-
-### Liquid Cooling Adoption
-
-若：
-
-液冷開始成為標準。
-
-AI：
-
-Leader +
-
----
-
-## AI Rule
-
-VRT
-
-不是一般工業股。
-
-AI 必須理解：
-
-AI Infrastructure
-
-=
-
-Power
-
-+
-
-Cooling
-
-+
-
-Rack
-
-+
-
-UPS
-
----
-
-## Holding View
-
-6–12 Months
-
-若 AI CapEx 持續增加，
-
-Vertiv 仍屬 AI Infrastructure 核心受惠公司。
-
----
-
-## AI Decision
-
-若：
-
-AI Data Center 持續增加
-
-GPU 功耗提升
-
-液冷滲透率提高
-
-大型 CSP 增加 CapEx
-
-則：
-
-Leader Candidate
-
-Upgrade
-
-若：
-
-CapEx 明顯下降
-
-AI 建廠減少
-
-則：
-
-Watch
-
----
-
-## Samantha Notes
-
-Vertiv 是 Samantha AI Platform 定義的：
-
-AI Infrastructure Leader。
-
-屬於：
-
-Discovery AI
-
-★★★★★
-
-Confidence：
-
-94%
-
-# VRT (Vertiv)
+# Vertiv (VRT)
 
 ## Status
 
@@ -197,37 +6,24 @@ Winner
 
 ---
 
-## DNA Type
+## Summary
 
-- AI Infrastructure
-- Power Infrastructure
-- Data Center
-- Compound Winner
+Vertiv is one of the world's leading providers of critical digital infrastructure for AI data centers.
 
----
+Its competitive advantage comes from supplying power, cooling and infrastructure systems that enable AI clusters to operate reliably at scale.
 
-## Business
-
-A global leader in critical digital infrastructure for AI data centers.
-
-Main Products
-
-- Power Systems
-- Cooling Systems
-- Data Center Infrastructure
-- Rack Solutions
-- Monitoring Software
-- Infrastructure Services
+As AI computing grows, demand for power infrastructure grows alongside it.
 
 ---
 
-## Why It Won
+## Why Samantha Selected
 
-- AI data centers required significantly more power and cooling
-- Hyperscalers accelerated infrastructure investment
-- Revenue growth accelerated with AI demand
-- EPS continued to surprise to the upside
-- Operating margins expanded through scale and execution
+- AI infrastructure leader
+- Power and cooling are essential for AI
+- Revenue acceleration
+- EPS continuous upgrades
+- Strong hyperscaler demand
+- Structural AI investment cycle
 
 ---
 
@@ -235,53 +31,63 @@ Main Products
 
 - AI Infrastructure
 - Power Infrastructure
-- Cooling Infrastructure
-- Revenue Acceleration
-- EPS Revision
-- Margin Expansion
+- Cooling
+- Compound Growth
+- Critical Infrastructure
 
 ---
 
 ## Key Signals
 
-- Revenue Growth ★★★★★
-- EPS Growth ★★★★★
-- AI Exposure ★★★★★
-- Infrastructure Demand ★★★★★
-- Operating Margin ★★★★★
-- Market Leadership ★★★★☆
+Revenue Growth        ★★★★★
 
----
+EPS Growth            ★★★★★
 
-## Investment Thesis
+Gross Margin          ★★★★☆
 
-AI is not only about GPUs.
+Capital Efficiency    ★★★★★
 
-Every AI data center requires reliable power, cooling and critical infrastructure.
+AI Exposure           ★★★★★
 
-Vertiv became one of the largest beneficiaries of global AI infrastructure investment.
+Infrastructure Demand ★★★★★
 
 ---
 
 ## Risks
 
-- AI capital expenditure slowdown
+- AI CapEx slowdown
+- Data center construction delays
 - Large customer concentration
-- Infrastructure project delays
 
 ---
 
-## Lessons Learned
+## AI Consensus
 
-The greatest AI winners are often the companies that provide the essential infrastructure behind AI.
+Growth                9.7 / 10
 
-Do not focus only on semiconductor companies.
+Quality               9.3 / 10
 
-Power and cooling are equally critical to AI deployment.
+Moat                  9.2 / 10
+
+Capital Efficiency    9.4 / 10
+
+Risk                  6.3 / 10
+
+Overall               9.5 / 10
 
 ---
 
-## Samantha AI Tags
+## Samantha Lessons
+
+The AI revolution is not only about GPUs.
+
+Every AI server requires electricity, cooling and supporting infrastructure.
+
+Power infrastructure companies can become long-term compound winners.
+
+---
+
+## Discovery Tags
 
 AI Infrastructure
 
@@ -291,6 +97,49 @@ Cooling
 
 Data Center
 
-Winner DNA
+Winner Genome
 
-Confidence: 9.8 / 10
+---
+
+## Similar DNA
+
+NVDA
+
+CRDO
+
+ANET
+
+---
+
+## Opposite DNA
+
+GOOG
+
+Reason:
+
+Large AI investment but slower conversion into shareholder returns.
+
+---
+
+## Why NOT Buy
+
+- AI infrastructure spending slows significantly.
+- Revenue growth drops below expectations.
+- Operating margin deteriorates.
+- Power demand weakens.
+
+---
+
+## Samantha Verdict
+
+Vertiv represents one of the strongest infrastructure beneficiaries of the AI era because every AI data center requires reliable power and cooling.
+
+Priority：★★★★★
+
+---
+
+## Knowledge Confidence
+
+Verified Winner
+
+Confidence：9.8 / 10
