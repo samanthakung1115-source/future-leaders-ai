@@ -1,7 +1,6 @@
 
-Beta 12
-- Added ActionPlanEngine
-- Added ActionItem model
-- Added Action Plan Streamlit page
-- Combined candidate score, STS context and risks into next-step guidance
-- Added Beta 12 test
+Beta 13
+- Added main Streamlit launcher app.py
+- Added sidebar navigation
+- Added graceful fallback if a page is not available
+- Added launcher test
