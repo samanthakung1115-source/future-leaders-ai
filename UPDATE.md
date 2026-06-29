@@ -1,13 +1,16 @@
 
-# 上傳方式
+# Update Instructions
 
-這次不要覆蓋整個 app.py。
+這次需要覆蓋 app.py。
 
 請上傳：
 
-- src/v11_control_center/__init__.py
-- src/v11_control_center/control_center.py
-- patches/APP_PY_V11_CONTROL_CENTER_SNIPPET.md
-- README_PATCH14.md
+- app.py
+- src/main_launcher/__init__.py
+- src/main_launcher/launcher.py
+- patches/APP_PY_REPLACEMENT_NOTICE.md
+- README_V1_2_MAIN_LAUNCHER_RC.md
 
-然後依照 patches/APP_PY_V11_CONTROL_CENTER_SNIPPET.md 修改你現有 app.py。
+Commit:
+
+refactor: add v1.2 main launcher rc
