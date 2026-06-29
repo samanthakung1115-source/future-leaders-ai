@@ -1,1 +1,1 @@
-from .research_card import ResearchCardGenerator
+from .research_card import ResearchCardGenerator, ResearchCard

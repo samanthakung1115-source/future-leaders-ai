@@ -1,37 +1,22 @@
-"""Knowledge object models for Future Leaders AI v11."""
 
 from __future__ import annotations
-
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-
 @dataclass(frozen=True)
 class KnowledgeSource:
-    """Represents a file-based knowledge source inside the repository."""
-
     path: Path
     relative_path: str
     category: str
     raw_text: str
 
     @property
-    def filename(self) -> str:
-        return self.path.name
-
-    @property
     def stem(self) -> str:
         return self.path.stem
 
-    def is_empty(self) -> bool:
-        return not self.raw_text.strip()
-
-
 @dataclass
 class CompanyKnowledgeObject:
-    """Structured company object used by the Knowledge Engine."""
-
     ticker: str
     name: str = ""
     status: str = "Unknown"
@@ -51,10 +36,9 @@ class CompanyKnowledgeObject:
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def has_dna(self, dna_name: str) -> bool:
-        target = dna_name.strip().lower()
-        return any(item.strip().lower() == target for item in self.dna)
+        return dna_name.strip().lower() in {item.strip().lower() for item in self.dna}
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> dict:
         return {
             "ticker": self.ticker,
             "name": self.name,

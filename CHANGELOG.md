@@ -1,5 +1,6 @@
 
-Sprint 11
-- Added Samantha Daily Brief
-- Added unified briefing data model
-- Prepared integration point for STS holdings
+Beta 6 Milestone 1
+- Added IntegratedAnalysisEngine
+- Connected Knowledge, Discovery, Research, Winner DNA, Decision Coach, Recommendation
+- Added TEM sample company
+- Added integration test

@@ -1,1 +1,1 @@
-from .winner_matcher import WinnerDNAMatcher
+from .winner_matcher import WinnerDNAMatcher, MatchResult
