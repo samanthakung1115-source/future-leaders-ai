@@ -1,16 +1,20 @@
 
 # Update Instructions
 
-這次需要覆蓋 app.py。
+Upload:
 
-請上傳：
+- src/ui/dashboard_integrated.py
+- patches/MAIN_LAUNCHER_DASHBOARD_INTEGRATION_SNIPPET.md
+- README_V1_2_RC_INTEGRATION1.md
 
-- app.py
-- src/main_launcher/__init__.py
+Then edit:
+
 - src/main_launcher/launcher.py
-- patches/APP_PY_REPLACEMENT_NOTICE.md
-- README_V1_2_MAIN_LAUNCHER_RC.md
+
+Add `("ui.dashboard_integrated", "render_dashboard")` as first Dashboard candidate.
+
+Do not overwrite app.py.
 
 Commit:
 
-refactor: add v1.2 main launcher rc
+feat: add v1.2 rc integration1 dashboard
