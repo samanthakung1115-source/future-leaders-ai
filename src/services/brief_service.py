@@ -17,24 +17,17 @@ class BriefService:
         decision_patterns = decision_patterns or []
         ranked = self.discovery.rank(candidates, self.settings.default_candidate_limit)
         warnings = self.portfolio.warnings(positions, self.settings.portfolio_rules)
-        enriched = []
-        cards = []
+        enriched, cards = [], []
 
         for c in ranked:
             is_holding, context = self.portfolio.context(c.ticker, positions, self.settings.portfolio_rules)
             coach_notes = self.coach.notes_for(c.ticker, decision_patterns)
             verdict = self.discovery.verdict(c.score, self.settings.score_thresholds)
             row = {
-                "ticker": c.ticker,
-                "score": c.score,
-                "verdict": verdict,
-                "theme": c.theme or "Unclassified",
-                "why_selected": c.why_selected,
-                "risks": c.risks,
-                "dna": c.dna,
-                "is_holding": is_holding,
-                "portfolio_context": context,
-                "coach_notes": coach_notes,
+                "ticker": c.ticker, "score": c.score, "verdict": verdict,
+                "theme": c.theme or "Unclassified", "why_selected": c.why_selected,
+                "risks": c.risks, "dna": c.dna, "is_holding": is_holding,
+                "portfolio_context": context, "coach_notes": coach_notes,
             }
             enriched.append(row)
             cards.append(self.research_cards.build_card(c, context, coach_notes, self.settings).to_dict())

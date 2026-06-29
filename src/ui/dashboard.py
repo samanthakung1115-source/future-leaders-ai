@@ -5,7 +5,7 @@ from core import Settings
 from discovery import CandidateLoader
 from portfolio import PortfolioLoader
 from decision import DecisionMemoryLoader
-from services import BriefService
+from services import BriefService, MarkdownReportBuilder
 from validation import CandidateCSVValidator, PortfolioCSVValidator
 
 def _validate_uploaded(uploaded, validator, label: str):
@@ -63,6 +63,7 @@ def render_dashboard():
         return
 
     brief = BriefService(settings).build(candidates, positions, decision_patterns=decision_patterns, data_health=data_health).to_dict()
+    report_md = MarkdownReportBuilder().build(brief)
 
     c1, c2, c3, c4 = st.columns(4)
     with c1: _status_card("Candidates", len(candidates), "Future Leaders inputs")
@@ -72,6 +73,13 @@ def render_dashboard():
 
     st.subheader(brief["summary"])
     st.write(brief["samantha_comment"])
+
+    st.download_button(
+        label="Download Daily Brief Markdown",
+        data=report_md,
+        file_name=settings.exports.get("default_filename", "samantha_daily_brief.md"),
+        mime="text/markdown",
+    )
 
     if brief["decision_coach"]:
         st.divider()

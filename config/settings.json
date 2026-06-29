@@ -1,6 +1,6 @@
 {
   "app_name": "Samantha AI Platform",
-  "version": "Future Leaders AI v1.0 RC1 - Milestone 4",
+  "version": "Future Leaders AI v1.0 RC1 - Milestone 5",
   "default_candidate_limit": 10,
   "score_thresholds": {
     "future_leader": 85,
@@ -17,5 +17,8 @@
   "research_card": {
     "max_reasons": 5,
     "max_risks": 5
+  },
+  "exports": {
+    "default_filename": "samantha_daily_brief.md"
   }
 }
