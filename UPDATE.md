@@ -5,9 +5,9 @@
 
 請上傳：
 
-- src/auto_refresh/__init__.py
-- src/auto_refresh/auto_refresh_patch.py
-- patches/APP_PY_AUTO_REFRESH_SNIPPET.md
-- README_PATCH04.md
+- src/samantha_brief/__init__.py
+- src/samantha_brief/samantha_brief_patch.py
+- patches/APP_PY_SAMANTHA_BRIEF_SNIPPET.md
+- README_PATCH05.md
 
-然後依照 patches/APP_PY_AUTO_REFRESH_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_SAMANTHA_BRIEF_SNIPPET.md 修改你現有 app.py。
