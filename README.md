@@ -1,15 +1,17 @@
-# Future Leaders AI v1.0 RC1 Final
 
-This is the RC1 Final integration milestone.
+# Future Leaders AI v1.0 Release Final
 
-Integrated features:
-- Daily Brief
-- Research Cards
-- Decision Coach
-- Portfolio Review
-- Markdown Export
-- Dashboard
-- Action Plan
+This is the first consolidated release.
 
-Next target:
-v1.0 Release
+Integrated modules:
+- Release Dashboard
+- Future Leaders Ranking Engine
+- STS Portfolio Integration (framework)
+- Decision Coach 2.0 (framework)
+- Daily Report & Export Center
+- News Watch Architecture
+
+Next roadmap:
+- v1.1
+- Live market/news integration
+- AI agent workflow
