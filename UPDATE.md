@@ -5,10 +5,9 @@
 
 請上傳：
 
-- src/patch_health/__init__.py
-- src/patch_health/patch_health_check.py
-- patches/APP_PY_PATCH_HEALTH_SNIPPET.md
-- patches/GITIGNORE_RECOMMENDED.txt
-- README_PATCH08.md
+- src/price_cache/__init__.py
+- src/price_cache/price_cache_patch.py
+- patches/APP_PY_PRICE_CACHE_SNIPPET.md
+- README_PATCH09.md
 
-然後依照 patches/APP_PY_PATCH_HEALTH_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_PRICE_CACHE_SNIPPET.md 修改你現有 app.py。

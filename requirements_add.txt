@@ -1,1 +1,2 @@
-streamlit
+pandas
+yfinance>=0.2.54
