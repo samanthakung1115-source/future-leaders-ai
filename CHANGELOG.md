@@ -1,5 +1,5 @@
 
-Sprint 4
-- Added Research Engine
-- Added ResearchCard dataclass
-- Added Samantha verdict generation
+Sprint 5
+- Added AnalysisPipeline
+- Connected parser, discovery engine and research engine
+- First end-to-end workflow
