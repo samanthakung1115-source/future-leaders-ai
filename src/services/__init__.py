@@ -1,2 +1,1 @@
-from .brief_service import BriefService
-from .report_builder import MarkdownReportBuilder
+from .release_dashboard_service import ReleaseDashboardService

@@ -1,1 +1,16 @@
-Switch to v11-beta or RC branch, upload extracted files, commit: feat: add rc1 milestone5 daily brief export
+
+# Update Instructions
+
+1. Switch to v11-beta or release branch.
+2. Add file -> Upload files.
+3. Unzip this package.
+4. Drag all extracted files into GitHub.
+5. Commit.
+
+Suggested commit:
+
+feat: add v1 release sprint1 dashboard shell
+
+Run:
+
+streamlit run app.py

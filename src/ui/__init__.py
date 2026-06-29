@@ -1,1 +1,1 @@
-from .dashboard import render_dashboard
+from .release_dashboard import render_release_dashboard

@@ -1,24 +1,18 @@
 {
   "app_name": "Samantha AI Platform",
-  "version": "Future Leaders AI v1.0 RC1 - Milestone 5",
+  "version": "Future Leaders AI v1.0 Release - Sprint 1",
+  "release_channel": "v1.0 Release",
   "default_candidate_limit": 10,
   "score_thresholds": {
     "future_leader": 85,
     "high_potential": 70,
     "watch": 55
   },
-  "portfolio_rules": {
-    "under_pressure_pct": -20,
-    "strong_winner_pct": 50,
-    "deep_break_pct": -40,
-    "near_cost_low_pct": -5,
-    "near_cost_high_pct": 5
-  },
-  "research_card": {
-    "max_reasons": 5,
-    "max_risks": 5
-  },
-  "exports": {
-    "default_filename": "samantha_daily_brief.md"
+  "dashboard": {
+    "show_market_snapshot": true,
+    "show_portfolio_snapshot": true,
+    "show_future_leaders": true,
+    "show_action_plan": true,
+    "show_decision_coach": true
   }
 }
