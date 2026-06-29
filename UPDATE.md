@@ -5,9 +5,10 @@
 
 請上傳：
 
-- src/live_price/__init__.py
-- src/live_price/live_price_patch.py
-- patches/APP_PY_INSERT_SNIPPET.md
-- README_PATCH01.md
+- config/sync_config.json
+- src/sts_sync/__init__.py
+- src/sts_sync/sts_live_sync_patch.py
+- patches/APP_PY_STS_SYNC_INSERT_SNIPPET.md
+- README_PATCH02.md
 
-然後依照 patches/APP_PY_INSERT_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_STS_SYNC_INSERT_SNIPPET.md 修改你現有 app.py。

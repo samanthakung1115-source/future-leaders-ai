@@ -1,8 +1,6 @@
 {
-  "sts_google_sheet_url": "https://docs.google.com/spreadsheets/d/1KnMA2MxX58ZpmM8zZ6_eJ7fcdB47lF1m4oBpdIcWebE/edit?gid=1389414286#gid=1389414286",
   "sts_csv_export_url": "https://docs.google.com/spreadsheets/d/1KnMA2MxX58ZpmM8zZ6_eJ7fcdB47lF1m4oBpdIcWebE/export?format=csv&gid=1389414286",
   "refresh_seconds": 60,
   "cache_path": "data/cache/sts_latest.csv",
-  "source_name": "STS Google Sheet",
-  "notes": "Google Sheet must be accessible to anyone with the link as Viewer."
+  "source_name": "STS Google Sheet"
 }
