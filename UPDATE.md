@@ -1,6 +1,16 @@
 
-Switch to v11-beta or release branch.
-Upload extracted files.
-Commit:
+# Update Instructions
 
-feat: add v1 release sprint5 daily report export center
+1. Switch to v11-beta or release branch.
+2. Add file -> Upload files.
+3. Unzip this package.
+4. Drag all extracted files into GitHub.
+5. Commit.
+
+Suggested commit:
+
+feat: add v1.1 sprint1 live price engine
+
+Run:
+
+streamlit run app.py
