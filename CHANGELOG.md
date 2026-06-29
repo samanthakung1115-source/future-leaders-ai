@@ -1,5 +1,5 @@
 
-Sprint 7
-- Added Decision Memory
-- Added TradeLesson model
-- Added lesson lookup and summary
+Sprint 8
+- Added WinnerDNAMatcher
+- Added MatchResult model
+- Added DNA similarity scoring
