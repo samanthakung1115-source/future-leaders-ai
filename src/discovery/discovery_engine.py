@@ -12,3 +12,9 @@ class DiscoveryEngine:
         if score >= thresholds.get("watch", 55):
             return "Watch"
         return "Low Priority"
+    def confidence(self, score: int) -> str:
+        if score >= 85:
+            return "High"
+        if score >= 70:
+            return "Medium"
+        return "Low"

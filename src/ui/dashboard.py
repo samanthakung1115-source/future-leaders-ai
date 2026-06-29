@@ -67,7 +67,7 @@ def render_dashboard():
     c1, c2, c3, c4 = st.columns(4)
     with c1: _status_card("Candidates", len(candidates), "Future Leaders inputs")
     with c2: _status_card("Portfolio Positions", len(positions), "STS inputs")
-    with c3: _status_card("Warnings", len(brief["portfolio_warnings"]), "Portfolio alerts")
+    with c3: _status_card("Research Cards", len(brief["research_cards"]), "Explainable analysis")
     with c4: _status_card("Coach Notes", len(brief["decision_coach"]), "Decision patterns")
 
     st.subheader(brief["summary"])
@@ -83,22 +83,27 @@ def render_dashboard():
         st.json(brief["data_health"])
 
     st.divider()
-    st.subheader("Future Leaders")
-    for item in brief["future_leaders"]:
+    st.subheader("Research Cards")
+    for card in brief["research_cards"]:
         with st.container(border=True):
-            st.markdown(f"### {item['ticker']} — {item['verdict']}")
-            st.metric("AI Score", item["score"])
+            st.markdown(f"### {card['ticker']} — {card['verdict']}")
+            st.metric("AI Score", card["score"])
+            st.write(f"**Theme:** {card['theme']}")
+            st.write(f"**Confidence:** {card['confidence']}")
+            if card["dna"]:
+                st.write("**DNA:** " + ", ".join(card["dna"]))
             st.markdown("**Why Samantha selected it**")
-            for reason in item["why_selected"]:
+            for reason in card["why_selected"]:
                 st.write(f"- {reason}")
             st.markdown("**Risks**")
-            for risk in item["risks"]:
+            for risk in card["risks"]:
                 st.write(f"- {risk}")
             st.markdown("**Portfolio Context**")
-            if item["is_holding"]:
-                st.warning(item["portfolio_context"])
-            else:
-                st.info(item["portfolio_context"])
+            st.info(card["portfolio_context"])
+            if card["coach_notes"]:
+                st.markdown("**Coach Notes**")
+                for note in card["coach_notes"]:
+                    st.warning(f"{note.get('pattern')}: {note.get('lesson')}")
 
     st.divider()
     st.subheader("Action Plan")

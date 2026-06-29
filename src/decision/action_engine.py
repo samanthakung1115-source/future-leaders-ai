@@ -25,6 +25,5 @@ class ActionEngine:
             action, priority, reason = "Monitor Only", "Low", "Insufficient evidence for active research priority."
 
         return ActionItem(ticker=ticker, action=action, priority=priority, reason=reason, risk_note="; ".join(risks) if risks else "No major risk noted.", coach_note=coach_note)
-
     def build_plan(self, rows: list[dict]) -> list[ActionItem]:
         return [self.build_item(row) for row in rows]

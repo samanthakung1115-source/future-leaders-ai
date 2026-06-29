@@ -11,6 +11,7 @@ class Settings:
     default_candidate_limit: int
     score_thresholds: dict
     portfolio_rules: dict
+    research_card: dict
 
     @classmethod
     def load(cls, path: str | Path = "config/settings.json") -> "Settings":
@@ -24,6 +25,7 @@ class Settings:
             default_candidate_limit=int(data.get("default_candidate_limit", 10)),
             score_thresholds=data.get("score_thresholds", {}),
             portfolio_rules=data.get("portfolio_rules", {}),
+            research_card=data.get("research_card", {"max_reasons": 5, "max_risks": 5}),
         )
 
     @classmethod
@@ -34,4 +36,5 @@ class Settings:
             default_candidate_limit=10,
             score_thresholds={"future_leader": 85, "high_potential": 70, "watch": 55},
             portfolio_rules={"under_pressure_pct": -20, "strong_winner_pct": 50, "deep_break_pct": -40, "near_cost_low_pct": -5, "near_cost_high_pct": 5},
+            research_card={"max_reasons": 5, "max_risks": 5},
         )

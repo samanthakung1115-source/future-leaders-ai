@@ -7,11 +7,9 @@ from core import DecisionPattern
 
 class DecisionMemoryLoader:
     REQUIRED_COLUMNS = {"ticker", "pattern", "lesson"}
-
     def load_path(self, path: str | Path) -> list[DecisionPattern]:
         with Path(path).open("r", encoding="utf-8-sig", newline="") as f:
             return self.load_file(f)
-
     def load_file(self, file_obj: TextIO) -> list[DecisionPattern]:
         reader = csv.DictReader(file_obj)
         if not reader.fieldnames:

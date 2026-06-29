@@ -22,5 +22,12 @@ class CandidateLoader:
         for row in reader:
             ticker = (row.get("ticker") or "").strip().upper()
             if ticker:
-                out.append(Candidate(ticker=ticker, score=int(float(row.get("score", 0) or 0)), why_selected=split_text(row.get("why_selected", row.get("reasons", ""))), risks=split_text(row.get("risks", ""))))
+                out.append(Candidate(
+                    ticker=ticker,
+                    score=int(float(row.get("score", 0) or 0)),
+                    why_selected=split_text(row.get("why_selected", row.get("reasons", ""))),
+                    risks=split_text(row.get("risks", "")),
+                    theme=(row.get("theme") or "").strip(),
+                    dna=split_text(row.get("dna", "")),
+                ))
         return out

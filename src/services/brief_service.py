@@ -1,6 +1,6 @@
 
 from core import SamanthaBrief
-from discovery import DiscoveryEngine
+from discovery import DiscoveryEngine, ResearchCardEngine
 from portfolio import PortfolioEngine
 from decision import ActionEngine, DecisionCoachEngine
 
@@ -8,6 +8,7 @@ class BriefService:
     def __init__(self, settings):
         self.settings = settings
         self.discovery = DiscoveryEngine()
+        self.research_cards = ResearchCardEngine(self.discovery)
         self.portfolio = PortfolioEngine()
         self.action = ActionEngine()
         self.coach = DecisionCoachEngine()
@@ -17,20 +18,26 @@ class BriefService:
         ranked = self.discovery.rank(candidates, self.settings.default_candidate_limit)
         warnings = self.portfolio.warnings(positions, self.settings.portfolio_rules)
         enriched = []
+        cards = []
 
         for c in ranked:
             is_holding, context = self.portfolio.context(c.ticker, positions, self.settings.portfolio_rules)
             coach_notes = self.coach.notes_for(c.ticker, decision_patterns)
-            enriched.append({
+            verdict = self.discovery.verdict(c.score, self.settings.score_thresholds)
+            row = {
                 "ticker": c.ticker,
                 "score": c.score,
-                "verdict": self.discovery.verdict(c.score, self.settings.score_thresholds),
+                "verdict": verdict,
+                "theme": c.theme or "Unclassified",
                 "why_selected": c.why_selected,
                 "risks": c.risks,
+                "dna": c.dna,
                 "is_holding": is_holding,
                 "portfolio_context": context,
                 "coach_notes": coach_notes,
-            })
+            }
+            enriched.append(row)
+            cards.append(self.research_cards.build_card(c, context, coach_notes, self.settings).to_dict())
 
         action_plan = [item.to_dict() for item in self.action.build_plan(enriched)]
         leaders = [x["ticker"] for x in enriched if x["verdict"] == "Future Leader"]
@@ -41,6 +48,7 @@ class BriefService:
             title="Samantha Daily Brief",
             summary=summary,
             future_leaders=enriched,
+            research_cards=cards,
             portfolio_warnings=warnings,
             action_plan=action_plan,
             decision_coach=decision_coach,
@@ -52,19 +60,9 @@ class BriefService:
         notes = []
         for item in enriched:
             for note in item.get("coach_notes", []):
-                notes.append({
-                    "ticker": item["ticker"],
-                    "pattern": note.get("pattern"),
-                    "lesson": note.get("lesson"),
-                    "severity": note.get("severity", "Medium"),
-                })
+                notes.append({"ticker": item["ticker"], "pattern": note.get("pattern"), "lesson": note.get("lesson"), "severity": note.get("severity", "Medium")})
         for note in self.coach.general_notes(patterns):
-            notes.append({
-                "ticker": "GENERAL",
-                "pattern": note.get("pattern"),
-                "lesson": note.get("lesson"),
-                "severity": note.get("severity", "Medium"),
-            })
+            notes.append({"ticker": "GENERAL", "pattern": note.get("pattern"), "lesson": note.get("lesson"), "severity": note.get("severity", "Medium")})
         return notes
 
     def _comment(self, enriched: list[dict], warnings: list[str], decision_coach: list[dict], data_health: dict) -> str:

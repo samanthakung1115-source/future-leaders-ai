@@ -8,6 +8,8 @@ class Candidate:
     score: int
     why_selected: list[str] = field(default_factory=list)
     risks: list[str] = field(default_factory=list)
+    theme: str = ""
+    dna: list[str] = field(default_factory=list)
     def to_dict(self) -> dict:
         return asdict(self)
 
@@ -34,6 +36,21 @@ class DecisionPattern:
         return asdict(self)
 
 @dataclass
+class ResearchCard:
+    ticker: str
+    score: int
+    verdict: str
+    theme: str
+    why_selected: list[str]
+    risks: list[str]
+    dna: list[str]
+    portfolio_context: str
+    coach_notes: list[dict]
+    confidence: str
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+@dataclass
 class ActionItem:
     ticker: str
     action: str
@@ -49,6 +66,7 @@ class SamanthaBrief:
     title: str
     summary: str
     future_leaders: list[dict]
+    research_cards: list[dict]
     portfolio_warnings: list[str]
     action_plan: list[dict]
     decision_coach: list[dict]

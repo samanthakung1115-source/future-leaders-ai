@@ -1,5 +1,5 @@
-RC1 Milestone 3
-- Added decision memory
-- Added personalized decision coach
-- Added coach section to dashboard
-- Added coach notes to action plan
+RC1 Milestone 4
+- Added Research Cards
+- Added theme and DNA support
+- Added explainable confidence
+- Added research cards dashboard section

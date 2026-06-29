@@ -2,5 +2,5 @@ ticker,pattern,lesson,trigger,severity
 RKLB,Too Early Sell,Do not abandon long-duration winners just because they consolidate.,Long consolidation,High
 SOFI,Averaging Down Risk,Avoid adding to an under-pressure holding without fresh thesis confirmation.,Below cost for long period,High
 MRVL,No Profit Taking,Large winners need a hold or trim plan before major pullbacks.,Strong unrealized gain,High
-STX,Position Too Small,If thesis improves, do not stop adding only because price is higher.,Small starter position,Medium
+STX,Position Too Small,If thesis improves do not stop adding only because price is higher.,Small starter position,Medium
 GENERAL,Do Not Chase,Do not buy only because the stock is moving fast.,Fast price move,Medium

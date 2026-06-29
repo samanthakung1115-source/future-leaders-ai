@@ -17,9 +17,6 @@ class CSVValidationResult:
 class BaseCSVValidator:
     required_columns: set[str] = set()
     optional_columns: set[str] = set()
-    def validate_path(self, path: str | Path) -> CSVValidationResult:
-        with Path(path).open("r", encoding="utf-8-sig", newline="") as f:
-            return self.validate_file(f)
     def validate_file(self, file_obj: TextIO) -> CSVValidationResult:
         reader = csv.DictReader(file_obj)
         columns = set(reader.fieldnames or [])
@@ -29,7 +26,7 @@ class BaseCSVValidator:
 
 class CandidateCSVValidator(BaseCSVValidator):
     required_columns = {"ticker", "score"}
-    optional_columns = {"why_selected", "reasons", "risks"}
+    optional_columns = {"why_selected", "reasons", "risks", "theme", "dna"}
 
 class PortfolioCSVValidator(BaseCSVValidator):
     required_columns = {"ticker"}
