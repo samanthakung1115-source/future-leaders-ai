@@ -1,4 +1,3 @@
-
 # Update Instructions
 
 1. Switch to v11-beta or release branch.
@@ -9,7 +8,7 @@
 
 Suggested commit:
 
-feat: add v1.1 sprint1 live price engine
+feat: add v1.1 sprint2 sts live sync engine
 
 Run:
 
