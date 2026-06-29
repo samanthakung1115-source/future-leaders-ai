@@ -1,5 +1,12 @@
 
-Switch to v11-beta.
-Upload all extracted files.
-Commit:
-feat: beta6 milestone2 streamlit integration
+# Update Instructions
+
+1. Switch to v11-beta.
+2. Add file -> Upload files.
+3. Unzip this package.
+4. Drag all extracted files into GitHub.
+5. Commit.
+
+Suggested commit:
+
+feat: add STS portfolio integration beta6 milestone3

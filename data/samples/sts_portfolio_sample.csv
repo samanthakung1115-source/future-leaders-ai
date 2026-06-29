@@ -1,0 +1,5 @@
+ticker,shares,cost_basis,market_value,unrealized_return_pct,distance_from_high_pct,status
+RKLB,129,60,10320,33,-43.8,Holding
+SOFI,265,23,5300,-22.49,-45.46,Holding
+MRVL,21,70,3100,64.52,-19.13,Holding
+GOOG,0,0,0,0,-17.22,Observation
