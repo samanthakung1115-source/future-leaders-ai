@@ -5,9 +5,9 @@
 
 請上傳：
 
-- src/safe_imports/__init__.py
-- src/safe_imports/safe_import_guard.py
-- patches/APP_PY_SAFE_IMPORT_GUARD_SNIPPET.md
-- README_PATCH11.md
+- src/v11_shell/__init__.py
+- src/v11_shell/integration_shell.py
+- patches/APP_PY_V11_SHELL_SNIPPET.md
+- README_PATCH12.md
 
-然後依照 patches/APP_PY_SAFE_IMPORT_GUARD_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_V11_SHELL_SNIPPET.md 修改你現有 app.py。
