@@ -1,6 +1,6 @@
 {
   "app_name": "Samantha AI Platform",
-  "version": "Future Leaders AI v1.0 RC1",
+  "version": "Future Leaders AI v1.0 RC1 - Milestone 2",
   "default_candidate_limit": 10,
   "score_thresholds": {
     "future_leader": 85,

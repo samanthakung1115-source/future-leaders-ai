@@ -1,1 +1,1 @@
-from .csv_validator import CSVValidationResult, CandidateCSVValidator, STSCSVValidator
+from .csv_validator import CSVValidationResult, CandidateCSVValidator, PortfolioCSVValidator

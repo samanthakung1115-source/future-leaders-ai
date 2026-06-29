@@ -1,8 +1,6 @@
 
 from __future__ import annotations
-
 from dataclasses import dataclass, asdict, field
-
 
 @dataclass
 class Candidate:
@@ -10,10 +8,8 @@ class Candidate:
     score: int
     why_selected: list[str] = field(default_factory=list)
     risks: list[str] = field(default_factory=list)
-
     def to_dict(self) -> dict:
         return asdict(self)
-
 
 @dataclass
 class PortfolioPosition:
@@ -24,10 +20,8 @@ class PortfolioPosition:
     distance_from_high_pct: float = 0.0
     alert: str = ""
     action: str = ""
-
     def to_dict(self) -> dict:
         return asdict(self)
-
 
 @dataclass
 class ActionItem:
@@ -36,10 +30,8 @@ class ActionItem:
     priority: str
     reason: str
     risk_note: str
-
     def to_dict(self) -> dict:
         return asdict(self)
-
 
 @dataclass
 class SamanthaBrief:
@@ -49,6 +41,6 @@ class SamanthaBrief:
     portfolio_warnings: list[str]
     action_plan: list[dict]
     samantha_comment: str
-
+    data_health: dict = field(default_factory=dict)
     def to_dict(self) -> dict:
         return asdict(self)

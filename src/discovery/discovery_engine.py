@@ -1,7 +1,6 @@
 
 from core import Candidate
 
-
 class DiscoveryEngine:
     def rank(self, candidates: list[Candidate], limit: int = 10) -> list[Candidate]:
         return sorted(candidates, key=lambda c: c.score, reverse=True)[:limit]

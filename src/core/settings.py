@@ -1,10 +1,8 @@
 
 from __future__ import annotations
-
 import json
 from dataclasses import dataclass
 from pathlib import Path
-
 
 @dataclass
 class Settings:
@@ -35,11 +33,5 @@ class Settings:
             version="Future Leaders AI",
             default_candidate_limit=10,
             score_thresholds={"future_leader": 85, "high_potential": 70, "watch": 55},
-            portfolio_rules={
-                "under_pressure_pct": -20,
-                "strong_winner_pct": 50,
-                "deep_break_pct": -40,
-                "near_cost_low_pct": -5,
-                "near_cost_high_pct": 5,
-            },
+            portfolio_rules={"under_pressure_pct": -20, "strong_winner_pct": 50, "deep_break_pct": -40, "near_cost_low_pct": -5, "near_cost_high_pct": 5},
         )

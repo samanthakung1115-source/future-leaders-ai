@@ -1,7 +1,6 @@
 
 from core import PortfolioPosition
 
-
 class PortfolioEngine:
     def position_map(self, positions: list[PortfolioPosition]) -> dict[str, PortfolioPosition]:
         return {p.ticker.upper(): p for p in positions}
@@ -18,11 +17,9 @@ class PortfolioEngine:
         return warnings
 
     def context(self, ticker: str, positions: list[PortfolioPosition], rules: dict) -> tuple[bool, str]:
-        pmap = self.position_map(positions)
-        p = pmap.get(ticker.upper())
+        p = self.position_map(positions).get(ticker.upper())
         if not p:
             return False, "Not currently held. Treat as discovery candidate."
-
         if p.cost_return_pct <= rules.get("under_pressure_pct", -20):
             return True, "Existing holding under pressure. Do not add without thesis confirmation."
         if p.cost_return_pct >= rules.get("strong_winner_pct", 50):
