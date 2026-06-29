@@ -1,7 +1,5 @@
 
-Beta 7
-- Added DailyBriefService product layer
-- Added Samantha Daily Brief Streamlit page
-- Added standalone app_beta7.py
-- Added sample Future Leaders candidates
-- Added Beta 7 test
+Beta 9
+- Added WatchlistEngine
+- Added WatchItem model
+- Added watch priorities and trigger generation
