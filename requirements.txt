@@ -1,1 +1,7 @@
-# No external dependencies required for Sprint 1 Session 1
+streamlit>=1.40.0
+pandas>=2.2.0
+numpy>=1.26.0
+yfinance>=0.2.54
+plotly>=5.24.0
+requests>=2.32.0
+python-dateutil>=2.9.0

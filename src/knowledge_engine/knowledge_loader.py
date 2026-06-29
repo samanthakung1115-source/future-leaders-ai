@@ -31,43 +31,32 @@ class KnowledgeLoader:
 
     def discover_markdown_files(self) -> list[Path]:
         files: list[Path] = []
-
         for directory in self.knowledge_dirs:
             root = self.repo_root / directory
             if not root.exists():
                 continue
-
             for path in root.rglob("*.md"):
                 if path.is_file():
                     files.append(path)
-
         return sorted(files)
 
     def load_sources(self) -> list[KnowledgeSource]:
         sources: list[KnowledgeSource] = []
-
         for path in self.discover_markdown_files():
             raw_text = path.read_text(encoding="utf-8")
             relative_path = path.relative_to(self.repo_root).as_posix()
-            category = self._infer_category(relative_path)
-
             sources.append(
                 KnowledgeSource(
                     path=path,
                     relative_path=relative_path,
-                    category=category,
+                    category=self._infer_category(relative_path),
                     raw_text=raw_text,
                 )
             )
-
         return sources
 
     def load_company_sources(self) -> list[KnowledgeSource]:
-        return [
-            source
-            for source in self.load_sources()
-            if source.category == "company"
-        ]
+        return [source for source in self.load_sources() if source.category == "company"]
 
     def _infer_category(self, relative_path: str) -> str:
         if relative_path.startswith("knowledge/companies/"):

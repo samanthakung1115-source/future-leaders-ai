@@ -54,9 +54,6 @@ class CompanyKnowledgeObject:
         target = dna_name.strip().lower()
         return any(item.strip().lower() == target for item in self.dna)
 
-    def add_metadata(self, key: str, value: Any) -> None:
-        self.metadata[key] = value
-
     def to_dict(self) -> dict[str, Any]:
         return {
             "ticker": self.ticker,
