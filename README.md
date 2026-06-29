@@ -1,25 +1,15 @@
-Future Leaders AI Terminal v10.0 AI Memory Engine
+# Future Leaders AI v1.0 RC1 Final
 
-1. 解壓縮
-2. 雙擊 run_app_windows.bat
-3. 開啟 http://localhost:8600
-4. 使用 AI Memory Engine / Winner DNA / Next DDOG Radar
+This is the RC1 Final integration milestone.
 
-# Future Leaders AI
+Integrated features:
+- Daily Brief
+- Research Cards
+- Decision Coach
+- Portfolio Review
+- Markdown Export
+- Dashboard
+- Action Plan
 
-Author: Samantha × ChatGPT
-
-## Future Leaders AI Terminal
-
-AI Discovery Platform
-
-- Discovery AI
-- Recovery AI
-- AI Consensus
-- Event Intelligence
-- Winner DNA
-- Portfolio Center
-
-Current Version:
-
-v10.0
+Next target:
+v1.0 Release
