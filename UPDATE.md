@@ -9,8 +9,4 @@
 
 Suggested commit:
 
-feat: add beta13 main app launcher
-
-Run:
-
-streamlit run app.py
+feat: add beta14 settings and data validation

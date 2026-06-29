@@ -1,6 +1,7 @@
 
-Beta 13
-- Added main Streamlit launcher app.py
-- Added sidebar navigation
-- Added graceful fallback if a page is not available
-- Added launcher test
+Beta 14
+- Added Samantha settings config
+- Added Candidate CSV validator
+- Added STS CSV validator
+- Added Settings UI page
+- Added Beta 14 tests
