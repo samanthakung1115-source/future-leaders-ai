@@ -1,5 +1,5 @@
 
-Sprint 8
-- Added WinnerDNAMatcher
-- Added MatchResult model
-- Added DNA similarity scoring
+Sprint 9
+- Added Recommendation Engine
+- Combined Research, Decision Coach and Winner DNA
+- Added final recommendation object
