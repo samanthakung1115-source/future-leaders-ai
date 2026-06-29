@@ -8,11 +8,15 @@ class ActionEngine:
         is_holding = bool(row.get("is_holding", False))
         context = row.get("portfolio_context", "")
         risks = row.get("risks", [])
+        coach_notes = row.get("coach_notes", [])
+        coach_note = " | ".join(note.get("lesson", "") for note in coach_notes if note.get("lesson"))
 
         if is_holding and "under pressure" in context.lower():
             action, priority, reason = "Review Thesis Before Adding", "High", "Existing holding is under pressure; avoid averaging down without evidence."
         elif is_holding and "winner" in context.lower():
             action, priority, reason = "Review Hold / Trim Plan", "High", "Existing winner requires a hold and profit-taking plan."
+        elif coach_notes:
+            action, priority, reason = "Review Decision Pattern", "High", "This ticker matches a historical decision pattern."
         elif score >= 85 and not is_holding:
             action, priority, reason = "Research for Starter Position", "High", "High-scoring discovery candidate not currently held."
         elif score >= 70:
@@ -20,7 +24,7 @@ class ActionEngine:
         else:
             action, priority, reason = "Monitor Only", "Low", "Insufficient evidence for active research priority."
 
-        return ActionItem(ticker=ticker, action=action, priority=priority, reason=reason, risk_note="; ".join(risks) if risks else "No major risk noted.")
+        return ActionItem(ticker=ticker, action=action, priority=priority, reason=reason, risk_note="; ".join(risks) if risks else "No major risk noted.", coach_note=coach_note)
 
     def build_plan(self, rows: list[dict]) -> list[ActionItem]:
         return [self.build_item(row) for row in rows]

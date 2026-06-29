@@ -4,7 +4,6 @@ from core import PortfolioPosition
 class PortfolioEngine:
     def position_map(self, positions: list[PortfolioPosition]) -> dict[str, PortfolioPosition]:
         return {p.ticker.upper(): p for p in positions}
-
     def warnings(self, positions: list[PortfolioPosition], rules: dict) -> list[str]:
         warnings = []
         for p in positions:
@@ -15,7 +14,6 @@ class PortfolioEngine:
             elif p.distance_from_high_pct <= rules.get("deep_break_pct", -40):
                 warnings.append(f"{p.ticker}: deep break from high ({p.distance_from_high_pct}%).")
         return warnings
-
     def context(self, ticker: str, positions: list[PortfolioPosition], rules: dict) -> tuple[bool, str]:
         p = self.position_map(positions).get(ticker.upper())
         if not p:

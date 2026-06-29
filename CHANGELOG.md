@@ -1,5 +1,5 @@
-RC1 Milestone 2
-- Added CSV validation
-- Added dashboard status cards
-- Added data health display
-- Improved upload error handling
+RC1 Milestone 3
+- Added decision memory
+- Added personalized decision coach
+- Added coach section to dashboard
+- Added coach notes to action plan

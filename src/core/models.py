@@ -24,12 +24,23 @@ class PortfolioPosition:
         return asdict(self)
 
 @dataclass
+class DecisionPattern:
+    ticker: str
+    pattern: str
+    lesson: str
+    trigger: str = ""
+    severity: str = "Medium"
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+@dataclass
 class ActionItem:
     ticker: str
     action: str
     priority: str
     reason: str
     risk_note: str
+    coach_note: str = ""
     def to_dict(self) -> dict:
         return asdict(self)
 
@@ -40,6 +51,7 @@ class SamanthaBrief:
     future_leaders: list[dict]
     portfolio_warnings: list[str]
     action_plan: list[dict]
+    decision_coach: list[dict]
     samantha_comment: str
     data_health: dict = field(default_factory=dict)
     def to_dict(self) -> dict:

@@ -8,11 +8,9 @@ from utils import split_text
 
 class CandidateLoader:
     REQUIRED_COLUMNS = {"ticker", "score"}
-
     def load_path(self, path: str | Path) -> list[Candidate]:
         with Path(path).open("r", encoding="utf-8-sig", newline="") as f:
             return self.load_file(f)
-
     def load_file(self, file_obj: TextIO) -> list[Candidate]:
         reader = csv.DictReader(file_obj)
         if not reader.fieldnames:
@@ -20,15 +18,9 @@ class CandidateLoader:
         missing = self.REQUIRED_COLUMNS - set(reader.fieldnames)
         if missing:
             raise ValueError(f"Missing required columns: {sorted(missing)}")
-        candidates = []
+        out = []
         for row in reader:
             ticker = (row.get("ticker") or "").strip().upper()
-            if not ticker:
-                continue
-            candidates.append(Candidate(
-                ticker=ticker,
-                score=int(float(row.get("score", 0) or 0)),
-                why_selected=split_text(row.get("why_selected", row.get("reasons", ""))),
-                risks=split_text(row.get("risks", "")),
-            ))
-        return candidates
+            if ticker:
+                out.append(Candidate(ticker=ticker, score=int(float(row.get("score", 0) or 0)), why_selected=split_text(row.get("why_selected", row.get("reasons", ""))), risks=split_text(row.get("risks", ""))))
+        return out

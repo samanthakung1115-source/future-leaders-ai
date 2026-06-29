@@ -18,7 +18,6 @@ class PortfolioLoader:
     def load_path(self, path: str | Path) -> list[PortfolioPosition]:
         with Path(path).open("r", encoding="utf-8-sig", newline="") as f:
             return self.load_file(f)
-
     def load_file(self, file_obj: TextIO) -> list[PortfolioPosition]:
         reader = csv.DictReader(file_obj)
         if not reader.fieldnames:
@@ -26,19 +25,9 @@ class PortfolioLoader:
         positions = []
         for row in reader:
             ticker = self._get(row, self.TICKER_KEYS).upper()
-            if not ticker:
-                continue
-            positions.append(PortfolioPosition(
-                ticker=ticker,
-                status=self._get(row, self.STATUS_KEYS) or "Holding",
-                shares=to_float(self._get(row, self.SHARES_KEYS)),
-                cost_return_pct=to_float(self._get(row, self.COST_RETURN_KEYS)),
-                distance_from_high_pct=to_float(self._get(row, self.HIGH_DISTANCE_KEYS)),
-                alert=self._get(row, self.ALERT_KEYS),
-                action=self._get(row, self.ACTION_KEYS),
-            ))
+            if ticker:
+                positions.append(PortfolioPosition(ticker=ticker, status=self._get(row, self.STATUS_KEYS) or "Holding", shares=to_float(self._get(row, self.SHARES_KEYS)), cost_return_pct=to_float(self._get(row, self.COST_RETURN_KEYS)), distance_from_high_pct=to_float(self._get(row, self.HIGH_DISTANCE_KEYS)), alert=self._get(row, self.ALERT_KEYS), action=self._get(row, self.ACTION_KEYS)))
         return positions
-
     def _get(self, row: dict, keys: list[str]) -> str:
         for key in keys:
             if key in row and row[key] is not None:

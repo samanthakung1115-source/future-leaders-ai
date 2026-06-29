@@ -4,6 +4,7 @@ import streamlit as st
 from core import Settings
 from discovery import CandidateLoader
 from portfolio import PortfolioLoader
+from decision import DecisionMemoryLoader
 from services import BriefService
 from validation import CandidateCSVValidator, PortfolioCSVValidator
 
@@ -23,6 +24,9 @@ def _load_positions(uploaded):
     if uploaded:
         return PortfolioLoader().load_file(io.StringIO(uploaded.getvalue().decode("utf-8-sig")))
     return PortfolioLoader().load_path("data/portfolio/sample_portfolio.csv")
+
+def _load_decision_memory():
+    return DecisionMemoryLoader().load_path("data/decision_memory/patterns.csv")
 
 def _status_card(title, value, help_text=""):
     with st.container(border=True):
@@ -53,22 +57,27 @@ def render_dashboard():
     try:
         candidates = _load_candidates(candidate_file)
         positions = _load_positions(portfolio_file)
+        decision_patterns = _load_decision_memory()
     except Exception as exc:
         st.error(f"Data loading failed: {exc}")
         return
 
-    brief = BriefService(settings).build(candidates, positions, data_health=data_health).to_dict()
+    brief = BriefService(settings).build(candidates, positions, decision_patterns=decision_patterns, data_health=data_health).to_dict()
 
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        _status_card("Candidates", len(candidates), "Future Leaders inputs")
-    with c2:
-        _status_card("Portfolio Positions", len(positions), "STS inputs")
-    with c3:
-        _status_card("Warnings", len(brief["portfolio_warnings"]), "Portfolio alerts")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1: _status_card("Candidates", len(candidates), "Future Leaders inputs")
+    with c2: _status_card("Portfolio Positions", len(positions), "STS inputs")
+    with c3: _status_card("Warnings", len(brief["portfolio_warnings"]), "Portfolio alerts")
+    with c4: _status_card("Coach Notes", len(brief["decision_coach"]), "Decision patterns")
 
     st.subheader(brief["summary"])
     st.write(brief["samantha_comment"])
+
+    if brief["decision_coach"]:
+        st.divider()
+        st.subheader("Decision Coach")
+        for note in brief["decision_coach"]:
+            st.warning(f"{note['ticker']} — {note['pattern']}: {note['lesson']}")
 
     with st.expander("Data Health"):
         st.json(brief["data_health"])
@@ -96,6 +105,8 @@ def render_dashboard():
     for action in brief["action_plan"]:
         st.write(f"**{action['ticker']}** — {action['action']} ({action['priority']})")
         st.caption(action["reason"])
+        if action.get("coach_note"):
+            st.caption("Coach: " + action["coach_note"])
 
     if brief["portfolio_warnings"]:
         st.divider()
