@@ -1,0 +1,1 @@
+from .patch_checklist import render_patch_install_checklist

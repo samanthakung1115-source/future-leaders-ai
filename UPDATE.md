@@ -5,9 +5,11 @@
 
 請上傳：
 
-- src/price_cache/__init__.py
-- src/price_cache/price_cache_patch.py
-- patches/APP_PY_PRICE_CACHE_SNIPPET.md
-- README_PATCH09.md
+- src/patch_checklist/__init__.py
+- src/patch_checklist/patch_checklist.py
+- patches/APP_PY_PATCH_CHECKLIST_SNIPPET.md
+- patches/PATCH_INSTALL_ORDER.md
+- patches/GITHUB_UPLOAD_RULES.md
+- README_PATCH10.md
 
-然後依照 patches/APP_PY_PRICE_CACHE_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_PATCH_CHECKLIST_SNIPPET.md 修改你現有 app.py。
