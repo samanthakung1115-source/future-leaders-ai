@@ -1,5 +1,5 @@
 
-Sprint 10
-- Added Daily Report Generator
-- Added DailyReport model
-- First daily summary layer
+Sprint 11
+- Added Samantha Daily Brief
+- Added unified briefing data model
+- Prepared integration point for STS holdings
