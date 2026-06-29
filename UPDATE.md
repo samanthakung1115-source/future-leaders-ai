@@ -1,15 +1,13 @@
-# Update Instructions
 
-1. Switch to v11-beta or release branch.
-2. Add file -> Upload files.
-3. Unzip this package.
-4. Drag all extracted files into GitHub.
-5. Commit.
+# 上傳方式
 
-Suggested commit:
+這次不要覆蓋整個 app.py。
 
-feat: add v1.1 sprint2 sts live sync engine
+請上傳：
 
-Run:
+- src/live_price/__init__.py
+- src/live_price/live_price_patch.py
+- patches/APP_PY_INSERT_SNIPPET.md
+- README_PATCH01.md
 
-streamlit run app.py
+然後依照 patches/APP_PY_INSERT_SNIPPET.md 修改你現有 app.py。
