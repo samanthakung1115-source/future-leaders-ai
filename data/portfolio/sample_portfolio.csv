@@ -1,0 +1,5 @@
+ticker,status,shares,cost_return_pct,distance_from_high_pct,alert,action
+RKLB,Holding,129,28.9,-43.8,Deep break,Do not add
+SOFI,Holding,265,-22.49,-45.46,Repair watch,Wait
+MRVL,Holding,21,64.52,-19.13,Core pullback,Hold / review trim
+GOOG,Observation,0,9.59,-17.22,Non-core,Watch
