@@ -6,12 +6,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 import streamlit as st
-from ui.logging_error_boundary_page import render
+from main_launcher import render_main_launcher
 
 st.set_page_config(
-    page_title="Future Leaders AI v1.2 Logging",
+    page_title="Future Leaders AI",
     page_icon="🧠",
     layout="wide",
 )
 
-render()
+render_main_launcher()

@@ -1,4 +1,4 @@
-Future Leaders AI v1.2 RC Sprint 4 Logging + Error Boundary test passed.
+Future Leaders AI v1.2 Main Launcher RC test passed.
 Spreadsheet runtime warmup failed during python startup
 Traceback (most recent call last):
   File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
@@ -9,8 +9,3 @@ Traceback (most recent call last):
   File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/remote.py", line 749, in __call__
   File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/client.py", line 150, in call
 artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
-2026-06-29 15:16:10,962 | INFO | future_leaders_ai | test_event ok=True
-2026-06-29 15:16:10,962 | ERROR | future_leaders_ai | test_error error=fake
-2026-06-29 15:16:10,963 | INFO | future_leaders_ai | page_start page=test
-2026-06-29 15:16:10,963 | INFO | future_leaders_ai | page_start page=test
-2026-06-29 15:16:10,963 | ERROR | future_leaders_ai | page_failed error=boom page=test
