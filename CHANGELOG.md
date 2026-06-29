@@ -1,5 +1,7 @@
 
-Beta 6 Milestone 4
-- Added AI Market Scanner
-- Added Candidate model
-- Added DailyBriefBuilder
+Beta 7
+- Added DailyBriefService product layer
+- Added Samantha Daily Brief Streamlit page
+- Added standalone app_beta7.py
+- Added sample Future Leaders candidates
+- Added Beta 7 test
