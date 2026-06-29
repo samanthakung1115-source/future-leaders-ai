@@ -1,5 +1,5 @@
 
-Sprint3
-- Added Discovery Engine
-- Added DNA scoring
-- Added ranking logic
+Sprint 4
+- Added Research Engine
+- Added ResearchCard dataclass
+- Added Samantha verdict generation
