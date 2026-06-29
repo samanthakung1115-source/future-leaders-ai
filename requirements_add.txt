@@ -1,3 +1,2 @@
+yfinance>=0.2.54
 pandas
-requests
-openpyxl>=3.1.0
