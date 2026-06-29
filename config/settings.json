@@ -1,6 +1,6 @@
 {
   "app_name": "Samantha AI Platform",
-  "version": "Future Leaders AI v1.0 Release - Sprint 1",
+  "version": "Future Leaders AI v1.0 Release - Sprint 2",
   "release_channel": "v1.0 Release",
   "default_candidate_limit": 10,
   "score_thresholds": {
@@ -8,11 +8,10 @@
     "high_potential": 70,
     "watch": 55
   },
-  "dashboard": {
-    "show_market_snapshot": true,
-    "show_portfolio_snapshot": true,
-    "show_future_leaders": true,
-    "show_action_plan": true,
-    "show_decision_coach": true
+  "ranking_weights": {
+    "ai_score": 0.4,
+    "growth_score": 0.25,
+    "quality_score": 0.2,
+    "risk_score": 0.15
   }
 }

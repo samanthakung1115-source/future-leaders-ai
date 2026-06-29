@@ -1,1 +1,1 @@
-from .release_dashboard_service import ReleaseDashboardService
+from .ranking_service import RankingService

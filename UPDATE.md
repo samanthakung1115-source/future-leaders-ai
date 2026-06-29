@@ -9,7 +9,7 @@
 
 Suggested commit:
 
-feat: add v1 release sprint1 dashboard shell
+feat: add v1 release sprint2 ranking engine
 
 Run:
 

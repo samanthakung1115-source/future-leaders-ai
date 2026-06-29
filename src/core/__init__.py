@@ -1,2 +1,2 @@
 from .settings import Settings
-from .release_models import ReleaseStatus, DashboardSection
+from .models import RankingCandidate, RankedCandidate

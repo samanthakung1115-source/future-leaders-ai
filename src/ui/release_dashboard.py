@@ -1,57 +1,67 @@
 
+import io
 import streamlit as st
 
 from core import Settings
-from services import ReleaseDashboardService
+from ranking import RankingCandidateLoader
+from services import RankingService
 
 
-def _render_status(status: dict):
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.metric("Version", status["version"])
-    with c2:
-        st.metric("Channel", status["channel"])
-    with c3:
-        st.metric("Status", status["status"])
-
-    st.info(f"Next focus: {status['next_focus']}")
-
-
-def _render_section(section: dict):
-    with st.container(border=True):
-        st.markdown(f"### {section['title']}")
-        st.caption(section["subtitle"])
-        st.write(f"**Status:** {section['status']}")
-        for item in section["items"]:
-            st.write(f"- {item}")
+def _load_candidates(uploaded):
+    loader = RankingCandidateLoader()
+    if uploaded:
+        text = uploaded.getvalue().decode("utf-8-sig")
+        return loader.load_file(io.StringIO(text))
+    return loader.load_path("data/candidates/release_sprint2_candidates.csv")
 
 
 def render_release_dashboard():
     settings = Settings.load()
-    service = ReleaseDashboardService(settings)
-
     st.title(settings.app_name)
-    st.caption("Future Leaders AI v1.0 Release")
+    st.caption(settings.version)
 
-    st.subheader("Release Dashboard")
-    _render_status(service.status().to_dict())
+    st.sidebar.header("Future Leaders Ranking")
+    uploaded = st.sidebar.file_uploader("Upload ranking candidates CSV", type=["csv"])
+    limit = st.sidebar.slider("Top N", 5, 30, settings.default_candidate_limit)
+
+    try:
+        candidates = _load_candidates(uploaded)
+        ranking = RankingService(settings).build(candidates, limit=limit)
+    except Exception as exc:
+        st.error(f"Ranking failed: {exc}")
+        return
+
+    st.subheader("Future Leaders Ranking Engine v1")
+
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.metric("Candidates", len(candidates))
+    with c2:
+        st.metric("Ranked", ranking["count"])
+    with c3:
+        top = ranking["top"]["ticker"] if ranking["top"] else "N/A"
+        st.metric("Top Candidate", top)
 
     st.divider()
-    st.subheader("Product Modules")
 
-    sections = [section.to_dict() for section in service.sections()]
-    for i in range(0, len(sections), 2):
-        cols = st.columns(2)
-        for col, section in zip(cols, sections[i:i + 2]):
-            with col:
-                _render_section(section)
-
-    st.divider()
-    st.subheader("Release Sprint Roadmap")
-    st.write("1. Sprint 1 — Formal dashboard shell")
-    st.write("2. Sprint 2 — Future Leaders Ranking Engine v1")
-    st.write("3. Sprint 3 — STS Portfolio deep integration")
-    st.write("4. Sprint 4 — Decision Coach 2.0")
-    st.write("5. Sprint 5 — Daily Report & Export Center")
-    st.write("6. Sprint 6 — News Watch architecture")
-    st.write("7. Final — v1.0 Release package")
+    for item in ranking["ranked"]:
+        with st.container(border=True):
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col1:
+                st.markdown(f"## #{item['rank']}")
+                st.metric(item["ticker"], item["total_score"])
+            with col2:
+                st.markdown(f"### {item['verdict']}")
+                st.write(f"**Theme:** {item['theme'] or 'Unclassified'}")
+                if item["dna"]:
+                    st.write("**DNA:** " + ", ".join(item["dna"]))
+                if item["why_selected"]:
+                    st.markdown("**Why Samantha selected it**")
+                    for reason in item["why_selected"]:
+                        st.write(f"- {reason}")
+                if item["risks"]:
+                    st.markdown("**Risks**")
+                    for risk in item["risks"]:
+                        st.write(f"- {risk}")
+            with col3:
+                st.metric("Rank Change", item["change"])

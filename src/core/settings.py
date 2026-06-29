@@ -13,7 +13,7 @@ class Settings:
     release_channel: str
     default_candidate_limit: int
     score_thresholds: dict
-    dashboard: dict
+    ranking_weights: dict
 
     @classmethod
     def load(cls, path: str | Path = "config/settings.json") -> "Settings":
@@ -28,7 +28,7 @@ class Settings:
             release_channel=data.get("release_channel", "Development"),
             default_candidate_limit=int(data.get("default_candidate_limit", 10)),
             score_thresholds=data.get("score_thresholds", {}),
-            dashboard=data.get("dashboard", {}),
+            ranking_weights=data.get("ranking_weights", {}),
         )
 
     @classmethod
@@ -39,11 +39,5 @@ class Settings:
             release_channel="Development",
             default_candidate_limit=10,
             score_thresholds={"future_leader": 85, "high_potential": 70, "watch": 55},
-            dashboard={
-                "show_market_snapshot": True,
-                "show_portfolio_snapshot": True,
-                "show_future_leaders": True,
-                "show_action_plan": True,
-                "show_decision_coach": True,
-            },
+            ranking_weights={"ai_score": 0.4, "growth_score": 0.25, "quality_score": 0.2, "risk_score": 0.15},
         )
