@@ -1,0 +1,5 @@
+2026-06-29 15:16:10,962 | INFO | future_leaders_ai | test_event ok=True
+2026-06-29 15:16:10,962 | ERROR | future_leaders_ai | test_error error=fake
+2026-06-29 15:16:10,963 | INFO | future_leaders_ai | page_start page=test
+2026-06-29 15:16:10,963 | INFO | future_leaders_ai | page_start page=test
+2026-06-29 15:16:10,963 | ERROR | future_leaders_ai | page_failed error=boom page=test

@@ -3,18 +3,18 @@
 
 Upload:
 
-- src/service_registry/__init__.py
-- src/service_registry/registry.py
-- src/ui/service_registry_page.py
-- tests/test_v12_rc_sprint2_service_registry.py
-- README_V1_2_RC_SPRINT2.md
+- src/app_logging/
+- src/error_boundary/
+- src/ui/logging_error_boundary_page.py
+- tests/test_v12_rc_sprint4_logging_error_boundary.py
+- README_V1_2_RC_SPRINT4.md
+- patches/APP_PY_ERROR_BOUNDARY_SNIPPET.md
 
-Optional for testing only:
-
+Optional standalone test:
 - app.py
 
-If your current app.py already uses v1.2 Main Launcher RC, do not overwrite it unless you want to test this page standalone.
+If your current app.py already uses v1.2 Main Launcher RC, do not overwrite it unless testing this sprint alone.
 
 Commit:
 
-refactor: add v1.2 rc sprint2 service registry
+refactor: add v1.2 rc sprint4 logging error boundary
