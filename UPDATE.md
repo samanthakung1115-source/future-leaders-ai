@@ -5,9 +5,9 @@
 
 請上傳：
 
-- src/samantha_brief/__init__.py
-- src/samantha_brief/samantha_brief_patch.py
-- patches/APP_PY_SAMANTHA_BRIEF_SNIPPET.md
-- README_PATCH05.md
+- src/sts_mapper/__init__.py
+- src/sts_mapper/sts_column_mapper_patch.py
+- patches/APP_PY_STS_COLUMN_MAPPER_SNIPPET.md
+- README_PATCH06.md
 
-然後依照 patches/APP_PY_SAMANTHA_BRIEF_SNIPPET.md 修改你現有 app.py。
+然後依照 patches/APP_PY_STS_COLUMN_MAPPER_SNIPPET.md 修改你現有 app.py。
