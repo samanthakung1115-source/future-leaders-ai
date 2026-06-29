@@ -17,7 +17,6 @@ class CandidateCSVLoader:
         reader = csv.DictReader(file_obj)
         if not reader.fieldnames:
             raise ValueError("Candidate CSV has no header row")
-
         missing = self.REQUIRED_COLUMNS - set(reader.fieldnames)
         if missing:
             raise ValueError(f"Missing required columns: {sorted(missing)}")

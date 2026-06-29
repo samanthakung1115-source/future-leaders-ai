@@ -9,8 +9,8 @@
 
 Suggested commit:
 
-feat: add beta11 unified Samantha brief
+feat: add beta12 action plan engine
 
 Run:
 
-streamlit run app_beta11.py
+streamlit run app_beta12.py

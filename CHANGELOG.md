@@ -1,7 +1,7 @@
 
-Beta 11
-- Added UnifiedBriefService
-- Added unified Streamlit page
-- Combined Future Leaders candidates with STS portfolio context
-- Added portfolio warnings inside discovery page
-- Added Beta 11 test
+Beta 12
+- Added ActionPlanEngine
+- Added ActionItem model
+- Added Action Plan Streamlit page
+- Combined candidate score, STS context and risks into next-step guidance
+- Added Beta 12 test

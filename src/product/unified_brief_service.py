@@ -5,8 +5,6 @@ from sts_live import STSPosition
 
 
 class UnifiedBriefService:
-    """Combine Future Leaders candidates with STS portfolio context."""
-
     def build(self, candidates: list[dict], positions: list[STSPosition], limit: int = 10) -> dict:
         position_map = {p.ticker.upper(): p for p in positions}
         ranked = sorted(candidates, key=lambda x: int(x.get("score", 0)), reverse=True)[:limit]
@@ -15,10 +13,11 @@ class UnifiedBriefService:
         for c in ranked:
             ticker = c["ticker"].upper()
             pos = position_map.get(ticker)
+            score = int(c.get("score", 0))
             enriched.append({
                 "ticker": ticker,
-                "score": int(c.get("score", 0)),
-                "verdict": self._verdict(int(c.get("score", 0))),
+                "score": score,
+                "verdict": self._verdict(score),
                 "why_selected": c.get("why_selected", []),
                 "risks": c.get("risks", []),
                 "is_holding": pos is not None,
@@ -30,7 +29,7 @@ class UnifiedBriefService:
             "summary": self._summary(enriched),
             "future_leaders": enriched,
             "portfolio_warnings": self._portfolio_warnings(positions),
-            "samantha_comment": self._comment(enriched, positions),
+            "samantha_comment": self._comment(enriched),
         }
 
     def _verdict(self, score: int) -> str:
@@ -70,8 +69,8 @@ class UnifiedBriefService:
             return f"{len(items)} candidates evaluated. Future Leaders: {', '.join(leaders)}."
         return f"{len(items)} candidates evaluated. No confirmed Future Leader yet."
 
-    def _comment(self, items: list[dict], positions: list[STSPosition]) -> str:
-        held_candidates = [i["ticker"] for i in items if i["is_holding"]]
-        if held_candidates:
-            return "Some candidates overlap with current holdings. Use both Discovery and STS rules before adding."
-        return "Candidates are mostly new discovery names. Start with research, not immediate position size."
+    def _comment(self, items: list[dict]) -> str:
+        held = [i["ticker"] for i in items if i["is_holding"]]
+        if held:
+            return "Some candidates overlap with current holdings. Use Discovery + STS + Action Plan together."
+        return "Candidates are mostly new discovery names. Start with research, not immediate size."
