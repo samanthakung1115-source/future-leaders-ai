@@ -22,15 +22,6 @@ class STSPosition:
 
 
 class STSLiveReader:
-    """Read STS exported CSV into structured portfolio positions.
-
-    Supported CSV columns are flexible. The reader accepts either English
-    or common STS-style column names.
-
-    Required:
-    - ticker / 股票 / 代碼
-    """
-
     TICKER_KEYS = ["ticker", "股票", "代碼", "symbol"]
     STATUS_KEYS = ["status", "持股/觀察", "holding_status"]
     SHARES_KEYS = ["shares", "股數", "持股數"]
@@ -48,12 +39,11 @@ class STSLiveReader:
         if not reader.fieldnames:
             raise ValueError("STS CSV has no header row")
 
-        positions: list[STSPosition] = []
+        positions = []
         for row in reader:
             ticker = self._get(row, self.TICKER_KEYS).upper()
             if not ticker:
                 continue
-
             positions.append(
                 STSPosition(
                     ticker=ticker,
@@ -65,7 +55,6 @@ class STSLiveReader:
                     action=self._get(row, self.ACTION_KEYS),
                 )
             )
-
         return positions
 
     def _get(self, row: dict, keys: list[str]) -> str:

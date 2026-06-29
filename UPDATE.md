@@ -9,8 +9,8 @@
 
 Suggested commit:
 
-feat: add beta10 STS live integration
+feat: add beta11 unified Samantha brief
 
 Run:
 
-streamlit run app_beta10.py
+streamlit run app_beta11.py
