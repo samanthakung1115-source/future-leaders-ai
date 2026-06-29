@@ -1,6 +1,5 @@
 
-Beta 6 Milestone 1
-- Added IntegratedAnalysisEngine
-- Connected Knowledge, Discovery, Research, Winner DNA, Decision Coach, Recommendation
-- Added TEM sample company
-- Added integration test
+Beta 6 Milestone 2
+- Added AppBridge
+- Added Streamlit panel
+- Connected UI to IntegratedAnalysisEngine
