@@ -1,0 +1,6 @@
+{
+  "api_base_url": "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE",
+  "default_timeout_seconds": 20,
+  "cache_path": "data/cache/sts_api_cache.json",
+  "cache_ttl_seconds": 300
+}

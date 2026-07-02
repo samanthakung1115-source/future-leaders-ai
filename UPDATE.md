@@ -1,18 +1,28 @@
+
 # Update Instructions
 
-這次是 Auto-Install 版。
+Upload to `v11-beta`:
 
-請直接上傳全部解壓後的檔案到 v11-beta。
+```text
+apps_script/STS_API_ENGINE_V1_SPRINT1.gs
+src/sts_api/__init__.py
+src/sts_api/client.py
+src/ui/sts_api_page.py
+config/sts_api_config.json
+docs/MAIN_LAUNCHER_STS_API_PAGE.md
+README_STS_API_ENGINE_V1_SPRINT1.md
+```
 
-可以覆蓋：
+Do not overwrite app.py.
 
-- app.py
-- src/main_launcher/__init__.py
-- src/main_launcher/launcher.py
-- src/ui/portfolio_center_integrated.py
+After deploying Apps Script, update:
 
-不用手動修改 launcher.py。
+```text
+config/sts_api_config.json
+```
 
 Commit:
 
-feat: add v1.2 rc integration2.1 portfolio auto install
+```text
+feat: add sts api engine v1 sprint1
+```
