@@ -24,7 +24,4 @@ def calculate_leader_score(metrics: dict, weights: dict | None = None) -> dict:
         breakdown[key] = round(part, 2)
         total += part
 
-    return {
-        "leader_score": round(total, 2),
-        "breakdown": breakdown,
-    }
+    return {"leader_score": round(total, 2), "breakdown": breakdown}

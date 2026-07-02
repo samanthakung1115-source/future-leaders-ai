@@ -17,13 +17,8 @@ class MarketScanner:
         if p.exists():
             return json.loads(p.read_text(encoding="utf-8"))
         return {
-            "trend": 20,
-            "momentum": 15,
-            "fundamental": 20,
-            "narrative": 15,
-            "valuation": 10,
-            "flow": 10,
-            "decision": 10,
+            "trend": 20, "momentum": 15, "fundamental": 20,
+            "narrative": 15, "valuation": 10, "flow": 10, "decision": 10,
         }
 
     def scan_dataframe(self, df: pd.DataFrame, top_n: int = 100) -> pd.DataFrame:
@@ -45,26 +40,14 @@ class MarketScanner:
             if col not in out.columns:
                 out[col] = 0
 
-        scores = []
-        roles = []
-        black_horse = []
+        scores, roles, black_horse = [], [], []
 
         for _, row in out.iterrows():
-            metrics = {
-                "trend": row.get("trend", 0),
-                "momentum": row.get("momentum", 0),
-                "fundamental": row.get("fundamental", 0),
-                "narrative": row.get("narrative", 0),
-                "valuation": row.get("valuation", 0),
-                "flow": row.get("flow", 0),
-                "decision": row.get("decision", 0),
-            }
-
+            metrics = {k: row.get(k, 0) for k in ["trend", "momentum", "fundamental", "narrative", "valuation", "flow", "decision"]}
             result = calculate_leader_score(metrics, self.weights)
             score = result["leader_score"]
             scores.append(score)
             roles.append(classify_role(score))
-
             black_horse.append(
                 score >= 78
                 and float(row.get("momentum", 0) or 0) >= 70
@@ -75,8 +58,6 @@ class MarketScanner:
         out["leader_score"] = scores
         out["role"] = roles
         out["black_horse"] = black_horse
-
         out = out.sort_values("leader_score", ascending=False)
         out["rank"] = range(1, len(out) + 1)
-
         return out.head(top_n)

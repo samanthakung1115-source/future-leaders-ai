@@ -25,58 +25,52 @@ def safe_page(title: str, module_name: str, attr_name: str = "render"):
 
 def render_home():
     st.title("Future Leaders AI")
-    st.caption("Sprint 3.3 Market Scanner Auto-Install")
+    st.caption("Sprint 3.4 Market Scanner + AI Memory")
 
     st.markdown("""
 ## 今日入口
 
-這版正式把 **Market Scanner 海選引擎** 加進主選單。
+這版把 **Market Scanner 海選引擎** 接上 **AI Memory**。
 
-左側選單可以切換：
+核心功能：
 
-- Dashboard
-- Market Scanner
-- STS Live Sync
-- Portfolio Center
-- v1.1 Control Center
-- Patch Health Check
-
-核心目標：
-
-> 從候選股清單中海選出 Future Leaders Top N 與 Black Horse。
+- Market Scanner 海選 Top N
+- Leader Score
+- Black Horse
+- AI Memory 分數歷史
+- Score Change 分數變化
+- Top Movers
 """)
 
     with st.container(border=True):
         st.markdown("### 建議工作流")
-        st.write("1. 先進 Market Scanner。")
-        st.write("2. 上傳候選股 CSV，或先用內建 sample。")
-        st.write("3. 點 Run Scanner，查看 Top N 與 Black Horse。")
-        st.write("4. 後續會接入 AI Memory，追蹤分數變化。")
+        st.write("1. 進 Market Scanner。")
+        st.write("2. Run Scanner。")
+        st.write("3. 勾選 Save to AI Memory。")
+        st.write("4. 第二次之後會看到 Score Change。")
 
 
 def render_about():
     st.title("About")
     st.markdown("""
-## Future Leaders AI Sprint 3.3
+## Future Leaders AI Sprint 3.4
 
 本版重點：
 
-- Market Scanner 接入主選單
-- Leader Score
-- Role Classification
-- Black Horse
-- Top N Ranking
+- 海選引擎接上 AI Memory
+- 記錄每檔股票 Leader Score 歷史
+- 找出分數上升最快的股票
 
 下一步：
 
-- Sprint 3.4：Market Scanner + AI Memory
 - Sprint 3.5：Dashboard 顯示 Tonight Future Leaders
+- Sprint 3.6：Narrative Engine
 """)
 
 
 def render_main_launcher():
     st.sidebar.title("Future Leaders AI")
-    st.sidebar.caption("Sprint 3.3")
+    st.sidebar.caption("Sprint 3.4")
 
     page = st.sidebar.radio(
         "功能",
@@ -84,6 +78,7 @@ def render_main_launcher():
             "Home",
             "Dashboard",
             "Market Scanner",
+            "AI Memory",
             "STS Live Sync",
             "Portfolio Center",
             "v1.1 Control Center",
@@ -111,10 +106,13 @@ def render_main_launcher():
                 return
         st.title("Dashboard")
         st.warning("找不到既有 Dashboard render function。")
-        st.caption("可用 Market Scanner 先查看海選結果。")
+        st.caption("可先用 Market Scanner 查看海選結果。")
 
     elif page == "Market Scanner":
         safe_page("Market Scanner", "ui.market_scanner_page", "render")
+
+    elif page == "AI Memory":
+        safe_page("AI Memory", "ui.ai_memory_page", "render")
 
     elif page == "STS Live Sync":
         safe_page("STS Live Sync", "ui.sts_sync_page", "render")
