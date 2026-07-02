@@ -1,1 +1,1 @@
-from .market_scanner import MarketScanner, Candidate
+from .scanner import MarketScanner

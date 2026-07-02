@@ -1,6 +1,11 @@
-# Sprint 3.1 AI Memory Engine
+# Sprint 3.2 Market Scanner
 
-Features
-- Store daily Leader Score history
-- Calculate day-over-day score change
-- Foundation for trend detection and Top Movers
+Features:
+- Candidate CSV scanner
+- Leader Score calculation
+- Role classification
+- Black Horse detection
+- Top N ranking
+
+Core idea:
+Find future leaders before they become obvious.
