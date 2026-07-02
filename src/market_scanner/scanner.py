@@ -9,8 +9,6 @@ from ai_engine import calculate_leader_score, classify_role
 
 
 class MarketScanner:
-    REQUIRED = ["ticker"]
-
     def __init__(self, weights_path: str = "config/leader_score_weights.json"):
         self.weights = self._load_weights(weights_path)
 
@@ -33,6 +31,7 @@ class MarketScanner:
             return pd.DataFrame()
 
         out = df.copy()
+
         if "ticker" not in out.columns:
             for c in ["Ticker", "symbol", "Symbol", "代碼", "股票"]:
                 if c in out.columns:
@@ -41,6 +40,10 @@ class MarketScanner:
 
         if "ticker" not in out.columns:
             raise ValueError("MarketScanner requires a ticker column")
+
+        for col in ["trend", "momentum", "fundamental", "narrative", "valuation", "flow", "decision"]:
+            if col not in out.columns:
+                out[col] = 0
 
         scores = []
         roles = []
@@ -56,12 +59,12 @@ class MarketScanner:
                 "flow": row.get("flow", 0),
                 "decision": row.get("decision", 0),
             }
+
             result = calculate_leader_score(metrics, self.weights)
             score = result["leader_score"]
             scores.append(score)
             roles.append(classify_role(score))
 
-            # Black horse: high score but not already obvious mega leader.
             black_horse.append(
                 score >= 78
                 and float(row.get("momentum", 0) or 0) >= 70
@@ -77,7 +80,3 @@ class MarketScanner:
         out["rank"] = range(1, len(out) + 1)
 
         return out.head(top_n)
-
-    def scan_csv(self, path: str, top_n: int = 100) -> pd.DataFrame:
-        df = pd.read_csv(path)
-        return self.scan_dataframe(df, top_n=top_n)

@@ -1,13 +1,18 @@
+
 # Update Instructions
 
-Upload all extracted files to `v11-beta`.
+這次是 Auto-Install 版。
 
-Important:
-- Replace Apps Script code in Google Sheets with `apps_script/STS_API_ENGINE_V1_SPRINT2.gs`.
-- Deploy as Web App.
-- Update `config/sts_api_config.json` with Web App URL.
+請直接把全部解壓後的檔案上傳到 v11-beta。
 
-Do not overwrite app.py.
+可以覆蓋：
+
+- app.py
+- src/main_launcher/__init__.py
+- src/main_launcher/launcher.py
+
+不用手動修改 launcher.py。
 
 Commit:
-feat: add sts api engine v1 sprint2 multi sheet api
+
+feat: add sprint3.3 market scanner auto install
