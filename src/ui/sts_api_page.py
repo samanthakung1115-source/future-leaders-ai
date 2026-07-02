@@ -3,10 +3,20 @@ import streamlit as st
 
 from sts_api import STSApiClient, STSApiConfig
 
+ACTIONS = [
+    ("health", "Health"),
+    ("sheets", "Sheets"),
+    ("portfolio", "Portfolio"),
+    ("watch", "看盤提醒"),
+    ("decision", "穩定決策"),
+    ("summary", "今日摘要"),
+    ("roles", "股票角色表"),
+    ("all", "All"),
+]
 
 def render():
     st.title("STS API Engine")
-    st.caption("v1.0 Sprint 1 - Apps Script JSON API")
+    st.caption("v1.0 Sprint 2 - Multi-sheet JSON API")
 
     cfg = STSApiConfig.load()
 
@@ -20,28 +30,22 @@ def render():
 
     client = STSApiClient(cfg)
 
-    col1, col2, col3, col4 = st.columns(4)
+    action = st.radio("Action", [a[0] for a in ACTIONS], format_func=lambda x: dict(ACTIONS)[x], horizontal=True)
 
-    with col1:
-        if st.button("Health"):
-            st.json(client.health())
+    if st.button("Run API"):
+        payload = client.get(action)
+        st.json(payload)
 
-    with col2:
-        if st.button("Portfolio"):
-            payload = client.portfolio()
-            st.json(payload)
-            df = client.portfolio_df()
+        if action not in ["health", "sheets", "all"]:
+            df = client.dataframe(action)
             if not df.empty:
+                st.subheader(f"{dict(ACTIONS)[action]} DataFrame")
                 st.dataframe(df, use_container_width=True)
 
-    with col3:
-        if st.button("Summary"):
-            payload = client.summary()
-            st.json(payload)
-            df = client.summary_df()
-            if not df.empty:
-                st.dataframe(df, use_container_width=True)
-
-    with col4:
-        if st.button("All"):
-            st.json(client.all())
+        if action == "all":
+            for key in ["portfolio", "watch", "decision", "summary", "roles"]:
+                block = payload.get(key, {})
+                rows = block.get("rows", []) if isinstance(block, dict) else []
+                if rows:
+                    st.subheader(key)
+                    st.dataframe(rows, use_container_width=True)

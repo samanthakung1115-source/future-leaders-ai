@@ -31,7 +31,7 @@ class STSApiConfig:
 
 
 class STSApiClient:
-    """Client for STS Apps Script JSON API."""
+    """Client for STS Apps Script JSON API Sprint 2."""
 
     def __init__(self, config: STSApiConfig | None = None):
         self.config = config or STSApiConfig.load()
@@ -39,55 +39,63 @@ class STSApiClient:
     def health(self) -> dict:
         return self.get("health")
 
+    def sheets(self) -> dict:
+        return self.get("sheets")
+
     def portfolio(self) -> dict:
         return self.get("portfolio")
+
+    def watch(self) -> dict:
+        return self.get("watch")
+
+    def decision(self) -> dict:
+        return self.get("decision")
 
     def summary(self) -> dict:
         return self.get("summary")
 
+    def roles(self) -> dict:
+        return self.get("roles")
+
     def all(self) -> dict:
         return self.get("all")
 
-    def portfolio_df(self) -> pd.DataFrame:
-        payload = self.portfolio()
+    def dataframe(self, action: str) -> pd.DataFrame:
+        payload = self.get(action)
         rows = self._extract_rows(payload, "data")
         return pd.DataFrame(rows)
 
+    def portfolio_df(self) -> pd.DataFrame:
+        return self.dataframe("portfolio")
+
+    def watch_df(self) -> pd.DataFrame:
+        return self.dataframe("watch")
+
+    def decision_df(self) -> pd.DataFrame:
+        return self.dataframe("decision")
+
     def summary_df(self) -> pd.DataFrame:
-        payload = self.summary()
-        rows = self._extract_rows(payload, "data")
-        return pd.DataFrame(rows)
+        return self.dataframe("summary")
+
+    def roles_df(self) -> pd.DataFrame:
+        return self.dataframe("roles")
 
     def get(self, action: str) -> dict:
         if not self.config.api_base_url or "PASTE_YOUR" in self.config.api_base_url:
-            return {
-                "ok": False,
-                "action": action,
-                "error": "API base URL not configured. Update config/sts_api_config.json."
-            }
+            return {"ok": False, "action": action, "error": "API base URL not configured. Update config/sts_api_config.json."}
 
         try:
-            response = requests.get(
-                self.config.api_base_url,
-                params={"action": action},
-                timeout=self.config.default_timeout_seconds,
-            )
+            response = requests.get(self.config.api_base_url, params={"action": action}, timeout=self.config.default_timeout_seconds)
             response.raise_for_status()
             payload = response.json()
             self._cache_set(action, payload)
             return payload
-
         except Exception as exc:
             cached = self._cache_get(action)
             if cached:
                 cached["_cache_warning"] = f"API request failed; using cache. Error: {exc}"
                 return cached
-
-            return {
-                "ok": False,
-                "action": action,
-                "error": str(exc)
-            }
+            return {"ok": False, "action": action, "error": str(exc)}
 
     def _extract_rows(self, payload: dict, key: str) -> list[dict]:
         block = payload.get(key, {})
@@ -112,10 +120,7 @@ class STSApiClient:
 
     def _cache_set(self, action: str, payload: dict):
         cache = self._load_cache()
-        cache[action] = {
-            "cached_at": datetime.now().isoformat(timespec="seconds"),
-            "payload": payload,
-        }
+        cache[action] = {"cached_at": datetime.now().isoformat(timespec="seconds"), "payload": payload}
         self._save_cache(cache)
 
     def _cache_get(self, action: str) -> dict | None:
@@ -123,7 +128,6 @@ class STSApiClient:
         item = cache.get(action)
         if not item:
             return None
-
         try:
             cached_at = datetime.fromisoformat(item.get("cached_at"))
             if datetime.now() - cached_at > timedelta(seconds=self.config.cache_ttl_seconds):
