@@ -1,17 +1,13 @@
-# Update Instructions
+# Future Leaders AI v1.2 RC Integration 2.1 - Auto Install
 
-這次是 Auto-Install 版。
+這版不用手動修改 launcher.py。
 
-請直接上傳全部解壓後的檔案到 v11-beta。
-
-可以覆蓋：
+請把解壓後全部檔案上傳到 v11-beta，允許覆蓋：
 
 - app.py
 - src/main_launcher/__init__.py
 - src/main_launcher/launcher.py
 - src/ui/portfolio_center_integrated.py
-
-不用手動修改 launcher.py。
 
 Commit:
 
